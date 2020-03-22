@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    bail: true,
     target: 'node',
     devtool: false,
     entry: path.resolve(__dirname, './src/index.js'),
