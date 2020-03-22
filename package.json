@@ -1,0 +1,65 @@
+{
+  "name": "react-modal",
+  "version": "1.0.0",
+  "description": "react modal",
+  "main": "index.js",
+  "module": "index.js",
+  "jsnext:main": "index.js",
+  "scripts": {
+    "build": "npm run test && webpack --mode=production",
+    "build:watch": "webpack --mode=development --watch",
+    "test": "jest",
+    "test:watch": "jest --verbose --watch",
+    "test:coverage": "jest --coverage --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ladderok34/react-modal.git"
+  },
+  "author": "Sergejs Klackovkis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ladderok34/react-modal/issues"
+  },
+  "keywords": [
+    "modal",
+    "react",
+    "react-component",
+    "ui",
+    "dialog",
+    "popup"
+  ],
+  "files": [
+    "index.*"
+  ],
+  "homepage": "https://github.com/ladderok34/react-select#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/parser": "^7.9.2",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.1",
+    "@babel/runtime": "^7.9.2",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "jest": "^25.1.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "global": "^4.4.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-jss": "^10.1.1"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "prop-types": "^15.7.2"
+  }
+}

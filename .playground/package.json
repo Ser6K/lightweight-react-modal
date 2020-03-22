@@ -1,0 +1,31 @@
+{
+  "name": "react-modal-playground",
+  "version": "1.0.0",
+  "description": "React modal example",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run react-link && webpack-dev-server --progress --colors",
+    "react-link": "npm link ../node_modules/react"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-modal": "file:../"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/parser": "^7.9.2",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.1",
+    "@babel/runtime": "^7.9.2",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
