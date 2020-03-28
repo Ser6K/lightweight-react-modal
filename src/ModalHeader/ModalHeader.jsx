@@ -7,7 +7,11 @@ const ModalHeader = ({ children }) => children;
 ModalHeader.displayName = HeaderDisplayName;
 
 ModalHeader.propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
+};
+
+ModalHeader.defaultProps = {
+    children: null,
 };
 
 export default ModalHeader;

@@ -7,7 +7,11 @@ const ModalFooter = ({ children }) => children;
 ModalFooter.displayName = FooterDisplayName;
 
 ModalFooter.propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
+};
+
+ModalFooter.defaultProps = {
+    children: null,
 };
 
 export default ModalFooter;

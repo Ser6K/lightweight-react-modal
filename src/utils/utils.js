@@ -7,6 +7,14 @@ const getNestedComponentByName = (name, children) => {
     let component = null;
 
     React.Children.map(children, (child) => {
+        if (!child || !child.props) {
+            return null;
+        }
+
+        if (!Object.keys(child.props).length) {
+            return null;
+        }
+
         if (get(child, 'type.displayName') && child.type.displayName === name) {
             component = child;
         }
