@@ -14,7 +14,7 @@ import {
     getContent,
     handleEscPress,
 } from '../utils/utils';
-import { addModal } from '../utils/register';
+import { addModal, removeModal } from '../utils/register';
 import styles from './Modal.styles';
 
 const Modal = ({
@@ -38,11 +38,16 @@ const Modal = ({
         fluid, maxHeight, minHeight, maxWidth, minWidth,
     });
 
+    const closeModal = useCallback(() => {
+        removeModal(modalRef);
+        onClose();
+    }, []);
+
     const handleOverlayClick = useCallback((event) => {
         const { target } = event;
 
         if (target !== modalRef.current && !modalRef.current.contains(target)) {
-            onClose();
+            closeModal();
         }
     }, []);
 
@@ -50,7 +55,7 @@ const Modal = ({
 
     useEffect(() => {
         if (escPressed) {
-            onClose('onEscape');
+            closeModal();
         }
     }, [escPressed]);
 
@@ -68,7 +73,7 @@ const Modal = ({
                         <button
                             role="button"
                             className={classNames(classes.close, customStyles.closeBtn)}
-                            onClick={onClose}
+                            onClick={closeModal}
                         >x</button>
                     )}
                     {header && (

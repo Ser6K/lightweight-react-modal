@@ -79,31 +79,6 @@ exports[`Modal tests fluid modal matches snapshot 1`] = `
           class="overlay-0-2-23"
         />
         <div
-          class="wrapper-0-2-25"
-        >
-          <div
-            class="modal-0-2-26 modal-d0-0-2-32"
-          >
-            <button
-              class="close-0-2-28"
-              role="button"
-            >
-              x
-            </button>
-            <div
-              class="header-0-2-27"
-            >
-              Header
-            </div>
-            <div
-              class="content-0-2-29"
-            />
-          </div>
-        </div>
-        <div
-          class="overlay-0-2-31"
-        />
-        <div
           class="wrapper-0-2-33"
         >
           <div
@@ -117,7 +92,9 @@ exports[`Modal tests fluid modal matches snapshot 1`] = `
             </button>
             <div
               class="header-0-2-35"
-            />
+            >
+              Header
+            </div>
             <div
               class="content-0-2-37"
             />
@@ -139,13 +116,11 @@ exports[`Modal tests fluid modal matches snapshot 1`] = `
               x
             </button>
             <div
-              class="content-0-2-45"
+              class="header-0-2-43"
             />
             <div
-              class="footer-0-2-46"
-            >
-              Footer
-            </div>
+              class="content-0-2-45"
+            />
           </div>
         </div>
         <div
@@ -168,7 +143,9 @@ exports[`Modal tests fluid modal matches snapshot 1`] = `
             />
             <div
               class="footer-0-2-54"
-            />
+            >
+              Footer
+            </div>
           </div>
         </div>
         <div
@@ -188,40 +165,63 @@ exports[`Modal tests fluid modal matches snapshot 1`] = `
             </button>
             <div
               class="content-0-2-61"
+            />
+            <div
+              class="footer-0-2-62"
+            />
+          </div>
+        </div>
+        <div
+          class="overlay-0-2-63"
+        />
+        <div
+          class="wrapper-0-2-65"
+        >
+          <div
+            class="modal-0-2-66 modal-d0-0-2-72"
+          >
+            <button
+              class="close-0-2-68"
+              role="button"
+            >
+              x
+            </button>
+            <div
+              class="content-0-2-69"
             >
               Modal
             </div>
           </div>
         </div>
         <div
-          class="overlay-0-2-63"
+          class="overlay-0-2-71"
         />
       </body>
     }
   >
     <div
-      className="wrapper-0-2-57"
+      className="wrapper-0-2-65"
       onClick={[Function]}
     >
       <div
-        className="modal-0-2-58 modal-d0-0-2-64"
+        className="modal-0-2-66 modal-d0-0-2-72"
       >
         <button
-          className="close-0-2-60"
+          className="close-0-2-68"
           onClick={[Function]}
           role="button"
         >
           x
         </button>
         <div
-          className="content-0-2-61"
+          className="content-0-2-69"
         >
           Modal
         </div>
       </div>
     </div>
     <div
-      className="overlay-0-2-63"
+      className="overlay-0-2-71"
     />
   </Portal>
 </Modal>
@@ -396,31 +396,6 @@ exports[`Modal tests not closable modal matches snapshot 1`] = `
           class="overlay-0-2-23"
         />
         <div
-          class="wrapper-0-2-25"
-        >
-          <div
-            class="modal-0-2-26 modal-d0-0-2-32"
-          >
-            <button
-              class="close-0-2-28"
-              role="button"
-            >
-              x
-            </button>
-            <div
-              class="header-0-2-27"
-            >
-              Header
-            </div>
-            <div
-              class="content-0-2-29"
-            />
-          </div>
-        </div>
-        <div
-          class="overlay-0-2-31"
-        />
-        <div
           class="wrapper-0-2-33"
         >
           <div
@@ -434,7 +409,9 @@ exports[`Modal tests not closable modal matches snapshot 1`] = `
             </button>
             <div
               class="header-0-2-35"
-            />
+            >
+              Header
+            </div>
             <div
               class="content-0-2-37"
             />
@@ -456,13 +433,11 @@ exports[`Modal tests not closable modal matches snapshot 1`] = `
               x
             </button>
             <div
-              class="content-0-2-45"
+              class="header-0-2-43"
             />
             <div
-              class="footer-0-2-46"
-            >
-              Footer
-            </div>
+              class="content-0-2-45"
+            />
           </div>
         </div>
         <div
@@ -485,7 +460,9 @@ exports[`Modal tests not closable modal matches snapshot 1`] = `
             />
             <div
               class="footer-0-2-54"
-            />
+            >
+              Footer
+            </div>
           </div>
         </div>
         <div
@@ -505,9 +482,10 @@ exports[`Modal tests not closable modal matches snapshot 1`] = `
             </button>
             <div
               class="content-0-2-61"
-            >
-              Modal
-            </div>
+            />
+            <div
+              class="footer-0-2-62"
+            />
           </div>
         </div>
         <div
@@ -519,6 +497,12 @@ exports[`Modal tests not closable modal matches snapshot 1`] = `
           <div
             class="modal-0-2-66 modal-d0-0-2-72"
           >
+            <button
+              class="close-0-2-68"
+              role="button"
+            >
+              x
+            </button>
             <div
               class="content-0-2-69"
             >
@@ -529,25 +513,41 @@ exports[`Modal tests not closable modal matches snapshot 1`] = `
         <div
           class="overlay-0-2-71"
         />
+        <div
+          class="wrapper-0-2-73"
+        >
+          <div
+            class="modal-0-2-74 modal-d0-0-2-80"
+          >
+            <div
+              class="content-0-2-77"
+            >
+              Modal
+            </div>
+          </div>
+        </div>
+        <div
+          class="overlay-0-2-79"
+        />
       </body>
     }
   >
     <div
-      className="wrapper-0-2-65"
+      className="wrapper-0-2-73"
       onClick={[Function]}
     >
       <div
-        className="modal-0-2-66 modal-d0-0-2-72"
+        className="modal-0-2-74 modal-d0-0-2-80"
       >
         <div
-          className="content-0-2-69"
+          className="content-0-2-77"
         >
           Modal
         </div>
       </div>
     </div>
     <div
-      className="overlay-0-2-71"
+      className="overlay-0-2-79"
     />
   </Portal>
 </Modal>

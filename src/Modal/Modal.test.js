@@ -1,11 +1,26 @@
 import React, { useState } from 'react';
 import ReactDom from 'react-dom';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Modal from './Modal';
+import * as ModalRegister from '../utils/register';
 import ModalHeader from '../ModalHeader/ModalHeader';
 import ModalFooter from '../ModalFooter/ModalFooter';
 
 describe('Modal tests', () => {
+    let WrappedModal;
+
+    beforeEach(() => {
+        WrappedModal = () => {
+            const [open, setOpen] = useState(true);
+
+            return open && (
+                <Modal onClose={() => setOpen(false)}>
+                    Modal
+                </Modal>
+            );
+        };
+    });
+
     test('it can be mounted', () => {
         const modal = mount(<Modal>Modal</Modal>);
         expect(modal.children()).toHaveLength(1);
@@ -16,9 +31,16 @@ describe('Modal tests', () => {
         expect(modal).toMatchSnapshot();
     });
 
+    test('it can register modal reference on mount', () => {
+        const modalRegisterSpy = jest.spyOn(ModalRegister, 'addModal');
+        mount(<Modal>Modal</Modal>);
+
+        expect(modalRegisterSpy).toHaveBeenCalledTimes(1);
+    });
+
     test('it mounts with create portal', () => {
         const portalSpy = jest.spyOn(ReactDom, 'createPortal');
-        mount(<Modal>Modal</Modal>);
+        shallow(<Modal>Modal</Modal>);
 
         expect(portalSpy).toHaveBeenCalledTimes(1);
     });
@@ -54,36 +76,32 @@ describe('Modal tests', () => {
     });
 
     test('it closes with close btn click', () => {
-        const Component = () => {
-            const [open, setOpen] = useState(true);
-
-            return open && (
-                <Modal onClose={() => setOpen(false)}>
-                    Modal
-                </Modal>
-            );
-        };
-
-        const modal = mount(<Component />);
+        const modal = mount(<WrappedModal />);
         const closeBtn = modal.find('button');
         closeBtn.simulate('click');
         expect(modal.children()).toHaveLength(0);
     });
 
     test('it closes with overlay click', () => {
-        const Component = () => {
-            const [open, setOpen] = useState(true);
-
-            return open && (
-                <Modal onClose={() => setOpen(false)}>
-                    Modal
-                </Modal>
-            );
-        };
-
-        const modal = mount(<Component />);
+        const modal = mount(<WrappedModal />);
         const modalWrapper = modal.find('div[onClick]');
         modalWrapper.simulate('click');
         expect(modal.children()).toHaveLength(0);
+    });
+
+    test('it closes with close btn click', () => {
+        const modal = mount(<WrappedModal />);
+        const modalRegisterSpy = jest.spyOn(ModalRegister, 'removeModal');
+        const closeBtn = modal.find('button');
+        closeBtn.simulate('click');
+        expect(modalRegisterSpy).toHaveBeenCalledTimes(1);
+    });
+
+    test('it can unsubscribe reference on unmount with overlay click', () => {
+        const modal = mount(<WrappedModal />);
+        const modalRegisterSpy = jest.spyOn(ModalRegister, 'removeModal');
+        const modalWrapper = modal.find('div[onClick]');
+        modalWrapper.simulate('click');
+        expect(modalRegisterSpy).toHaveBeenCalledTimes(1);
     });
 });

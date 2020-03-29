@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import window from 'global/window';
+import document from 'global/document';
 import get from 'lodash/get';
-import { removeModal, isLastOpened } from './register';
+import { isLastOpened } from './register';
 
 const getNestedComponentByName = (name, children) => {
     let component = null;
@@ -23,8 +23,8 @@ const getNestedComponentByName = (name, children) => {
     return component;
 };
 
-export const FooterDisplayName = 'ModalFooter';
 export const HeaderDisplayName = 'ModalHeader';
+export const FooterDisplayName = 'ModalFooter';
 
 export const getHeader = children => getNestedComponentByName(HeaderDisplayName, children);
 export const getFooter = children => getNestedComponentByName(FooterDisplayName, children);
@@ -60,7 +60,6 @@ export const handleEscPress = (closable, ref) => {
                 return;
             }
             setEscPressed(true);
-            removeModal(ref);
         }
     };
 
