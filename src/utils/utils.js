@@ -11,7 +11,7 @@ const getNestedComponentByName = (name, children) => {
             return null;
         }
 
-        if (!Object.keys(child.props).length) {
+        if (!get(child, 'props.children')) {
             return null;
         }
 
@@ -31,6 +31,10 @@ export const getFooter = children => getNestedComponentByName(FooterDisplayName,
 
 export const getContent = (children) => {
     const content = [];
+
+    if (!children || !Object.keys(children).length) {
+        return content;
+    }
 
     React.Children.map(children, (child) => {
         if (!child) {

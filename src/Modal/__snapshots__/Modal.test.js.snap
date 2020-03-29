@@ -116,9 +116,6 @@ exports[`Modal tests fluid modal matches snapshot 1`] = `
               x
             </button>
             <div
-              class="header-0-2-43"
-            />
-            <div
               class="content-0-2-45"
             />
           </div>
@@ -165,9 +162,6 @@ exports[`Modal tests fluid modal matches snapshot 1`] = `
             </button>
             <div
               class="content-0-2-61"
-            />
-            <div
-              class="footer-0-2-62"
             />
           </div>
         </div>
@@ -433,9 +427,6 @@ exports[`Modal tests not closable modal matches snapshot 1`] = `
               x
             </button>
             <div
-              class="header-0-2-43"
-            />
-            <div
               class="content-0-2-45"
             />
           </div>
@@ -482,9 +473,6 @@ exports[`Modal tests not closable modal matches snapshot 1`] = `
             </button>
             <div
               class="content-0-2-61"
-            />
-            <div
-              class="footer-0-2-62"
             />
           </div>
         </div>
