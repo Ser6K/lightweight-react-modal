@@ -1,4 +1,4 @@
-let modals = [];
+export let modals = [];
 
 export const addModal = ref => {
     modals = [...modals, ref.current];
