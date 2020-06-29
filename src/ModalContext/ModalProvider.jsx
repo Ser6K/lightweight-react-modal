@@ -63,4 +63,4 @@ ModalProvider.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-export default ModalProvider;
+export default React.memo(ModalProvider);

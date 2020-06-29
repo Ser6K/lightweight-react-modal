@@ -77,7 +77,7 @@ describe('Modal tests', () => {
 
     test('it closes with close btn click', () => {
         const modal = mount(<WrappedModal />);
-        const closeBtn = modal.find('button');
+        const closeBtn = modal.find('closeButton');
         closeBtn.simulate('click');
         expect(modal.children()).toHaveLength(0);
     });
@@ -92,7 +92,7 @@ describe('Modal tests', () => {
     test('it closes with close btn click', () => {
         const modal = mount(<WrappedModal />);
         const modalRegisterSpy = jest.spyOn(ModalRegister, 'removeModal');
-        const closeBtn = modal.find('button');
+        const closeBtn = modal.find('closeButton');
         closeBtn.simulate('click');
         expect(modalRegisterSpy).toHaveBeenCalledTimes(1);
     });

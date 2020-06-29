@@ -43,26 +43,3 @@ describe('getFooter', () => {
         expect(getFooter(component.props.children)).toBe(null);
     });
 });
-
-describe('getContent', () => {
-    test('it returns correct content', () => {
-        const component = <div>Content</div>;
-        expect(getContent(component)).toEqual([component]);
-        expect(getContent('Name')).toEqual(['Name']);
-    });
-
-    test('it ignores components with name ModalHeader/ModalFooter', () => {
-        expect(getContent(<ModalHeader></ModalHeader>)).toEqual([]);
-        expect(getContent(<ModalFooter>Footer</ModalFooter>)).toEqual([]);
-
-        const component = <div><div>Modal</div><ModalFooter>Footer</ModalFooter></div>;
-        expect(getContent(component.props.children)).toEqual([<div>Modal</div>]);
-    });
-
-    test('it returns empty array if no content provided', () => {
-        expect(getContent()).toEqual([]);
-        expect(getContent('')).toEqual([]);
-        expect(getContent({})).toEqual([]);
-        expect(getContent([])).toEqual([]);
-    });
-});

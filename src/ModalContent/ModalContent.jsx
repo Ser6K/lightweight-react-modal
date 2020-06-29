@@ -2,29 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { createUseStyles } from 'react-jss';
-import { HeaderDisplayName } from '../utils/utils';
-import styles from './ModalHeader.styles';
+import { ContentDisplayName } from '../utils/utils';
+import styles from './ModalContent.styles';
 
-const ModalHeader = ({ children, className, ...props }) => {
+const ModalContent = ({ children, className, ...props }) => {
     const classes = createUseStyles(styles)();
+
     return (
         <div
             {...props}
-            className={classNames(classes.header, className)}
+            className={classNames(classes.content, className)}
         >
             {children}
         </div>
     );
 };
 
-ModalHeader.propTypes = {
+ModalContent.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
 };
 
-ModalHeader.defaultProps = {
+ModalContent.defaultProps = {
     className: null,
 };
 
-ModalHeader.displayName = HeaderDisplayName;
-export default React.memo(ModalHeader);
+ModalContent.displayName = ContentDisplayName;
+export default React.memo(ModalContent);

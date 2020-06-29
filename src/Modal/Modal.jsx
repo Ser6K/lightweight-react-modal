@@ -15,6 +15,8 @@ import {
     handleEscPress,
 } from '../utils/utils';
 import { addModal, removeModal } from '../utils/register';
+import CloseButton from './components/CloseButton/CloseButton';
+import Overlay from './components/Overlay/Overlay';
 import styles from './Modal.styles';
 
 const Modal = ({
@@ -43,15 +45,7 @@ const Modal = ({
         onClose();
     }, []);
 
-    const handleOverlayClick = useCallback((event) => {
-        const { target } = event;
-
-        if (target !== modalRef.current && !modalRef.current.contains(target)) {
-            closeModal();
-        }
-    }, []);
-
-    useEffect(() => addModal(modalRef), [modalRef]);
+    useEffect(() => { addModal(modalRef); }, [modalRef]);
 
     useEffect(() => {
         if (escPressed) {
@@ -60,41 +54,23 @@ const Modal = ({
     }, [escPressed]);
 
     return createPortal(
-        <>
+        <div className={classNames(classes.wrapper, customStyles.wrapper)}>
             <div
-                className={classNames(classes.wrapper, customStyles.wrapper)}
-                onClick={handleOverlayClick}
+                ref={modalRef}
+                className={classNames(classes.modal, customStyles.modal)}
             >
-                <div
-                    ref={modalRef}
-                    className={classNames(classes.modal, customStyles.modal)}
-                >
-                    {closable && (
-                        <button
-                            role="button"
-                            className={classNames(classes.close, customStyles.closeBtn)}
-                            onClick={closeModal}
-                        >x</button>
-                    )}
-                    {header && (
-                        <div className={classNames(classes.header, customStyles.header)}>
-                            {header}
-                        </div>
-                    )}
-                    {content && (
-                        <div className={classNames(classes.content, customStyles.content)}>
-                            {content}
-                        </div>
-                    )}
-                    {footer && (
-                        <div className={classNames(classes.footer, customStyles.footer)}>
-                            {footer}
-                        </div>
-                    )}
-                </div>
+                {closable && (
+                    <CloseButton
+                        className={customStyles.closeBtn}
+                        onClick={onClose}
+                    />
+                )}
+                {header && header}
+                {content && content}
+                {footer && footer}
             </div>
-            <div className={classNames(classes.overlay, customStyles.overlay)} />
-        </>, document.body,
+            <Overlay onClick={onClose} className={customStyles.overlay} />
+        </div>, document.body,
     );
 };
 
@@ -114,9 +90,6 @@ Modal.propTypes = {
         wrapper: PropTypes.string,
         modal: PropTypes.string,
         closeBtn: PropTypes.string,
-        header: PropTypes.string,
-        content: PropTypes.string,
-        footer: PropTypes.string,
         overlay: PropTypes.string,
     }),
 };
@@ -133,11 +106,9 @@ Modal.defaultProps = {
         wrapper: null,
         modal: null,
         closeBtn: null,
-        header: null,
-        content: null,
-        footer: null,
         overlay: null,
     },
 };
 
+Modal.displayName = 'Modal';
 export default React.memo(Modal);
