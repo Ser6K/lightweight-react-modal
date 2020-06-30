@@ -73,6 +73,7 @@ const ModalExample = () => {
                     onClose={() => { modal.close('dialog2') }}
                     maxHeight={300}
                     maxWidth={500}
+                    closeButtonIcon={<i>gg wp</i>}
                 >
                     <ModalHeader>
                         Header

@@ -166,4 +166,12 @@ describe('Modal props', () => {
             expect(events).toEqual({});
         });
     });
+
+    test('close button default icon can be changed', () => {
+        const onClose = jest.fn();
+        const modal = mount(<Modal onClose={onClose} closeButtonIcon="Close">Modal</Modal>);
+
+        const closeButton = modal.find('CloseButton');
+        expect(closeButton.text()).toBe('Close');
+    });
 });

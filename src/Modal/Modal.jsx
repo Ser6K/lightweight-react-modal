@@ -29,6 +29,7 @@ const Modal = ({
     minWidth,
     children,
     customClassNames,
+    closeButtonIcon,
 }) => {
     const header = useCallback(getHeader(children), [children]);
     const footer = useCallback(getFooter(children), [children]);
@@ -68,6 +69,7 @@ const Modal = ({
                     <CloseButton
                         className={customClassNames.closeButton}
                         onClick={closeModal}
+                        icon={closeButtonIcon}
                     />
                 )}
                 {header && header}
@@ -100,6 +102,7 @@ Modal.propTypes = {
         closeBtn: PropTypes.string,
         overlay: PropTypes.string,
     }),
+    closeButtonIcon: PropTypes.node,
 };
 
 Modal.defaultProps = {
@@ -116,6 +119,7 @@ Modal.defaultProps = {
         closeButton: null,
         overlay: null,
     },
+    closeButtonIcon: null,
 };
 
 Modal.displayName = 'Modal';

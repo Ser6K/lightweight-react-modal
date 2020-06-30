@@ -1,140 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal snapshots  1`] = `
-<Modal
-  customClassNames={
-    Object {
-      "closeButton": "closeButtonClassName",
-      "modal": "modalClassName",
-      "overlay": "overlayClassName",
-      "wrapper": "wrapperClassName",
-    }
-  }
->
-  <Portal
-    containerInfo={
-      <body>
-        <div
-          class="wrapper-0-2-1"
-        >
-          <div
-            class="modal-0-2-2 modal-d0-0-2-3"
-          >
-            <button
-              class="close-0-2-4"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-5"
-          />
-        </div>
-        <div
-          class="wrapper-0-2-6"
-        >
-          <div
-            class="modal-0-2-7 modal-d0-0-2-8"
-          >
-            <button
-              class="close-0-2-9"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-10"
-          />
-        </div>
-        <div
-          class="wrapper-0-2-11"
-        >
-          <div
-            class="modal-0-2-12 modal-d0-0-2-13"
-          >
-            <button
-              class="close-0-2-14"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-15"
-          />
-        </div>
-        <div
-          class="wrapper-0-2-16 wrapperClassName"
-        >
-          <div
-            class="modal-0-2-17 modal-d0-0-2-18 modalClassName"
-          >
-            <button
-              class="close-0-2-19 closeButtonClassName"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-20 overlayClassName"
-          />
-        </div>
-        <div
-          class="wrapper-0-2-21 wrapperClassName"
-        >
-          <div
-            class="modal-0-2-22 modal-d0-0-2-23 modalClassName"
-          >
-            <button
-              class="close-0-2-24 closeButtonClassName"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-25 overlayClassName"
-          />
-        </div>
-      </body>
-    }
-  >
-    <div
-      className="wrapper-0-2-21 wrapperClassName"
-    >
-      <div
-        className="modal-0-2-22 modal-d0-0-2-23 modalClassName"
-      >
-        <CloseButton
-          className="closeButtonClassName"
-          onClick={[Function]}
-        >
-          <button
-            className="close-0-2-24 closeButtonClassName"
-            onClick={[Function]}
-            role="button"
-          >
-            x
-          </button>
-        </CloseButton>
-      </div>
-      <Overlay
-        className="overlayClassName"
-        onClick={[Function]}
-      >
-        <div
-          className="overlay-0-2-25 overlayClassName"
-          onClick={[Function]}
-        />
-      </Overlay>
-    </div>
-  </Portal>
-</Modal>
-`;
-
 exports[`Modal snapshots default modal matches snapshot 1`] = `
 <Modal>
   <Portal
@@ -168,6 +33,7 @@ exports[`Modal snapshots default modal matches snapshot 1`] = `
       >
         <CloseButton
           className={null}
+          icon={null}
           onClick={[Function]}
         >
           <button
@@ -245,6 +111,7 @@ exports[`Modal snapshots fluid modal matches snapshot 1`] = `
       >
         <CloseButton
           className={null}
+          icon={null}
           onClick={[Function]}
         >
           <button
@@ -363,6 +230,7 @@ exports[`Modal snapshots modal matches snapshot when custom styles are set 1`] =
       >
         <CloseButton
           className="closeButtonClassName"
+          icon={null}
           onClick={[Function]}
         >
           <button
@@ -380,141 +248,6 @@ exports[`Modal snapshots modal matches snapshot when custom styles are set 1`] =
       >
         <div
           className="overlay-0-2-20 overlayClassName"
-          onClick={[Function]}
-        />
-      </Overlay>
-    </div>
-  </Portal>
-</Modal>
-`;
-
-exports[`Modal snapshots modal matches snapshot when custom styles are set 2`] = `
-<Modal
-  customClassNames={
-    Object {
-      "closeButton": "closeButtonClassName",
-      "modal": "modalClassName",
-      "overlay": "overlayClassName",
-      "wrapper": "wrapperClassName",
-    }
-  }
->
-  <Portal
-    containerInfo={
-      <body>
-        <div
-          class="wrapper-0-2-1"
-        >
-          <div
-            class="modal-0-2-2 modal-d0-0-2-3"
-          >
-            <button
-              class="close-0-2-4"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-5"
-          />
-        </div>
-        <div
-          class="wrapper-0-2-6"
-        >
-          <div
-            class="modal-0-2-7 modal-d0-0-2-8"
-          >
-            <button
-              class="close-0-2-9"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-10"
-          />
-        </div>
-        <div
-          class="wrapper-0-2-11"
-        >
-          <div
-            class="modal-0-2-12 modal-d0-0-2-13"
-          >
-            <button
-              class="close-0-2-14"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-15"
-          />
-        </div>
-        <div
-          class="wrapper-0-2-16 wrapperClassName"
-        >
-          <div
-            class="modal-0-2-17 modal-d0-0-2-18 modalClassName"
-          >
-            <button
-              class="close-0-2-19 closeButtonClassName"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-20 overlayClassName"
-          />
-        </div>
-        <div
-          class="wrapper-0-2-21 wrapperClassName"
-        >
-          <div
-            class="modal-0-2-22 modal-d0-0-2-23 modalClassName"
-          >
-            <button
-              class="close-0-2-24 closeButtonClassName"
-              role="button"
-            >
-              x
-            </button>
-          </div>
-          <div
-            class="overlay-0-2-25 overlayClassName"
-          />
-        </div>
-      </body>
-    }
-  >
-    <div
-      className="wrapper-0-2-21 wrapperClassName"
-    >
-      <div
-        className="modal-0-2-22 modal-d0-0-2-23 modalClassName"
-      >
-        <CloseButton
-          className="closeButtonClassName"
-          onClick={[Function]}
-        >
-          <button
-            className="close-0-2-24 closeButtonClassName"
-            onClick={[Function]}
-            role="button"
-          >
-            x
-          </button>
-        </CloseButton>
-      </div>
-      <Overlay
-        className="overlayClassName"
-        onClick={[Function]}
-      >
-        <div
-          className="overlay-0-2-25 overlayClassName"
           onClick={[Function]}
         />
       </Overlay>
@@ -595,6 +328,7 @@ exports[`Modal snapshots modal matches snapshot when maxHeight/minHeight/maxWidt
       >
         <CloseButton
           className={null}
+          icon={null}
           onClick={[Function]}
         >
           <button
