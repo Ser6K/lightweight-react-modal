@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { render } from 'react-dom';
 import {
     Modal,
@@ -6,10 +6,12 @@ import {
     ModalFooter,
     ModalContent,
     ModalProvider,
+    useModalContext,
 } from 'react-modal';
 
-const ModalExample = ({ modal }) => {
+const ModalExample = () => {
     const [showHeader, setShowHeader] = useState(false);
+    const modal = useModalContext();
 
     useEffect(() => {
         modal.open('dialog');
