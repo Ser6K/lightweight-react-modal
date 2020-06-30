@@ -1,0 +1,621 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal snapshots  1`] = `
+<Modal
+  customClassNames={
+    Object {
+      "closeButton": "closeButtonClassName",
+      "modal": "modalClassName",
+      "overlay": "overlayClassName",
+      "wrapper": "wrapperClassName",
+    }
+  }
+>
+  <Portal
+    containerInfo={
+      <body>
+        <div
+          class="wrapper-0-2-1"
+        >
+          <div
+            class="modal-0-2-2 modal-d0-0-2-3"
+          >
+            <button
+              class="close-0-2-4"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-5"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-6"
+        >
+          <div
+            class="modal-0-2-7 modal-d0-0-2-8"
+          >
+            <button
+              class="close-0-2-9"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-10"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-11"
+        >
+          <div
+            class="modal-0-2-12 modal-d0-0-2-13"
+          >
+            <button
+              class="close-0-2-14"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-15"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-16 wrapperClassName"
+        >
+          <div
+            class="modal-0-2-17 modal-d0-0-2-18 modalClassName"
+          >
+            <button
+              class="close-0-2-19 closeButtonClassName"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-20 overlayClassName"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-21 wrapperClassName"
+        >
+          <div
+            class="modal-0-2-22 modal-d0-0-2-23 modalClassName"
+          >
+            <button
+              class="close-0-2-24 closeButtonClassName"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-25 overlayClassName"
+          />
+        </div>
+      </body>
+    }
+  >
+    <div
+      className="wrapper-0-2-21 wrapperClassName"
+    >
+      <div
+        className="modal-0-2-22 modal-d0-0-2-23 modalClassName"
+      >
+        <CloseButton
+          className="closeButtonClassName"
+          onClick={[Function]}
+        >
+          <button
+            className="close-0-2-24 closeButtonClassName"
+            onClick={[Function]}
+            role="button"
+          >
+            x
+          </button>
+        </CloseButton>
+      </div>
+      <Overlay
+        className="overlayClassName"
+        onClick={[Function]}
+      >
+        <div
+          className="overlay-0-2-25 overlayClassName"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
+  </Portal>
+</Modal>
+`;
+
+exports[`Modal snapshots default modal matches snapshot 1`] = `
+<Modal>
+  <Portal
+    containerInfo={
+      <body>
+        <div
+          class="wrapper-0-2-1"
+        >
+          <div
+            class="modal-0-2-2 modal-d0-0-2-3"
+          >
+            <button
+              class="close-0-2-4"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-5"
+          />
+        </div>
+      </body>
+    }
+  >
+    <div
+      className="wrapper-0-2-1"
+    >
+      <div
+        className="modal-0-2-2 modal-d0-0-2-3"
+      >
+        <CloseButton
+          className={null}
+          onClick={[Function]}
+        >
+          <button
+            className="close-0-2-4"
+            onClick={[Function]}
+            role="button"
+          >
+            x
+          </button>
+        </CloseButton>
+      </div>
+      <Overlay
+        className={null}
+        onClick={[Function]}
+      >
+        <div
+          className="overlay-0-2-5"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
+  </Portal>
+</Modal>
+`;
+
+exports[`Modal snapshots fluid modal matches snapshot 1`] = `
+<Modal
+  fluid={true}
+>
+  <Portal
+    containerInfo={
+      <body>
+        <div
+          class="wrapper-0-2-1"
+        >
+          <div
+            class="modal-0-2-2 modal-d0-0-2-3"
+          >
+            <button
+              class="close-0-2-4"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-5"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-6"
+        >
+          <div
+            class="modal-0-2-7 modal-d0-0-2-8"
+          >
+            <button
+              class="close-0-2-9"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-10"
+          />
+        </div>
+      </body>
+    }
+  >
+    <div
+      className="wrapper-0-2-6"
+    >
+      <div
+        className="modal-0-2-7 modal-d0-0-2-8"
+      >
+        <CloseButton
+          className={null}
+          onClick={[Function]}
+        >
+          <button
+            className="close-0-2-9"
+            onClick={[Function]}
+            role="button"
+          >
+            x
+          </button>
+        </CloseButton>
+      </div>
+      <Overlay
+        className={null}
+        onClick={[Function]}
+      >
+        <div
+          className="overlay-0-2-10"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
+  </Portal>
+</Modal>
+`;
+
+exports[`Modal snapshots modal matches snapshot when custom styles are set 1`] = `
+<Modal
+  customClassNames={
+    Object {
+      "closeButton": "closeButtonClassName",
+      "modal": "modalClassName",
+      "overlay": "overlayClassName",
+      "wrapper": "wrapperClassName",
+    }
+  }
+>
+  <Portal
+    containerInfo={
+      <body>
+        <div
+          class="wrapper-0-2-1"
+        >
+          <div
+            class="modal-0-2-2 modal-d0-0-2-3"
+          >
+            <button
+              class="close-0-2-4"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-5"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-6"
+        >
+          <div
+            class="modal-0-2-7 modal-d0-0-2-8"
+          >
+            <button
+              class="close-0-2-9"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-10"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-11"
+        >
+          <div
+            class="modal-0-2-12 modal-d0-0-2-13"
+          >
+            <button
+              class="close-0-2-14"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-15"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-16 wrapperClassName"
+        >
+          <div
+            class="modal-0-2-17 modal-d0-0-2-18 modalClassName"
+          >
+            <button
+              class="close-0-2-19 closeButtonClassName"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-20 overlayClassName"
+          />
+        </div>
+      </body>
+    }
+  >
+    <div
+      className="wrapper-0-2-16 wrapperClassName"
+    >
+      <div
+        className="modal-0-2-17 modal-d0-0-2-18 modalClassName"
+      >
+        <CloseButton
+          className="closeButtonClassName"
+          onClick={[Function]}
+        >
+          <button
+            className="close-0-2-19 closeButtonClassName"
+            onClick={[Function]}
+            role="button"
+          >
+            x
+          </button>
+        </CloseButton>
+      </div>
+      <Overlay
+        className="overlayClassName"
+        onClick={[Function]}
+      >
+        <div
+          className="overlay-0-2-20 overlayClassName"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
+  </Portal>
+</Modal>
+`;
+
+exports[`Modal snapshots modal matches snapshot when custom styles are set 2`] = `
+<Modal
+  customClassNames={
+    Object {
+      "closeButton": "closeButtonClassName",
+      "modal": "modalClassName",
+      "overlay": "overlayClassName",
+      "wrapper": "wrapperClassName",
+    }
+  }
+>
+  <Portal
+    containerInfo={
+      <body>
+        <div
+          class="wrapper-0-2-1"
+        >
+          <div
+            class="modal-0-2-2 modal-d0-0-2-3"
+          >
+            <button
+              class="close-0-2-4"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-5"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-6"
+        >
+          <div
+            class="modal-0-2-7 modal-d0-0-2-8"
+          >
+            <button
+              class="close-0-2-9"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-10"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-11"
+        >
+          <div
+            class="modal-0-2-12 modal-d0-0-2-13"
+          >
+            <button
+              class="close-0-2-14"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-15"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-16 wrapperClassName"
+        >
+          <div
+            class="modal-0-2-17 modal-d0-0-2-18 modalClassName"
+          >
+            <button
+              class="close-0-2-19 closeButtonClassName"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-20 overlayClassName"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-21 wrapperClassName"
+        >
+          <div
+            class="modal-0-2-22 modal-d0-0-2-23 modalClassName"
+          >
+            <button
+              class="close-0-2-24 closeButtonClassName"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-25 overlayClassName"
+          />
+        </div>
+      </body>
+    }
+  >
+    <div
+      className="wrapper-0-2-21 wrapperClassName"
+    >
+      <div
+        className="modal-0-2-22 modal-d0-0-2-23 modalClassName"
+      >
+        <CloseButton
+          className="closeButtonClassName"
+          onClick={[Function]}
+        >
+          <button
+            className="close-0-2-24 closeButtonClassName"
+            onClick={[Function]}
+            role="button"
+          >
+            x
+          </button>
+        </CloseButton>
+      </div>
+      <Overlay
+        className="overlayClassName"
+        onClick={[Function]}
+      >
+        <div
+          className="overlay-0-2-25 overlayClassName"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
+  </Portal>
+</Modal>
+`;
+
+exports[`Modal snapshots modal matches snapshot when maxHeight/minHeight/maxWidth/minWidth props are provided 1`] = `
+<Modal
+  maxHeight={100}
+  maxWidth={120}
+  minHeight={50}
+  minWidth={60}
+>
+  <Portal
+    containerInfo={
+      <body>
+        <div
+          class="wrapper-0-2-1"
+        >
+          <div
+            class="modal-0-2-2 modal-d0-0-2-3"
+          >
+            <button
+              class="close-0-2-4"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-5"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-6"
+        >
+          <div
+            class="modal-0-2-7 modal-d0-0-2-8"
+          >
+            <button
+              class="close-0-2-9"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-10"
+          />
+        </div>
+        <div
+          class="wrapper-0-2-11"
+        >
+          <div
+            class="modal-0-2-12 modal-d0-0-2-13"
+          >
+            <button
+              class="close-0-2-14"
+              role="button"
+            >
+              x
+            </button>
+          </div>
+          <div
+            class="overlay-0-2-15"
+          />
+        </div>
+      </body>
+    }
+  >
+    <div
+      className="wrapper-0-2-11"
+    >
+      <div
+        className="modal-0-2-12 modal-d0-0-2-13"
+      >
+        <CloseButton
+          className={null}
+          onClick={[Function]}
+        >
+          <button
+            className="close-0-2-14"
+            onClick={[Function]}
+            role="button"
+          >
+            x
+          </button>
+        </CloseButton>
+      </div>
+      <Overlay
+        className={null}
+        onClick={[Function]}
+      >
+        <div
+          className="overlay-0-2-15"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
+  </Portal>
+</Modal>
+`;

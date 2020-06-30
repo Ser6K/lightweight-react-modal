@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal footer it matches snapshot with no props 1`] = `
+<ModalFooter>
+  <div
+    className=""
+  >
+    Footer
+  </div>
+</ModalFooter>
+`;
+
+exports[`Modal footer it matches snapshot with props 1`] = `
+<ModalFooter
+  className="className"
+  style={
+    Object {
+      "display": "inline",
+    }
+  }
+>
+  <div
+    className="className"
+    style={
+      Object {
+        "display": "inline",
+      }
+    }
+  >
+    Footer
+  </div>
+</ModalFooter>
+`;

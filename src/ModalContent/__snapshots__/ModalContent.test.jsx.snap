@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal content it matches snapshot with no props 1`] = `
+<ModalContent>
+  <div
+    className="content-0-2-1"
+  >
+    Content
+  </div>
+</ModalContent>
+`;
+
+exports[`Modal content it matches snapshot with props 1`] = `
+<ModalContent
+  className="className"
+  style={
+    Object {
+      "display": "inline",
+    }
+  }
+>
+  <div
+    className="content-0-2-2 className"
+    style={
+      Object {
+        "display": "inline",
+      }
+    }
+  >
+    Content
+  </div>
+</ModalContent>
+`;

@@ -28,24 +28,29 @@ const Modal = ({
     maxWidth,
     minWidth,
     children,
-    customStyles,
+    customClassNames,
 }) => {
     const header = useCallback(getHeader(children), [children]);
     const footer = useCallback(getFooter(children), [children]);
     const content = useCallback(getContent(children), [children]);
     const modalRef = useRef();
-    const escPressed = handleEscPress(closable, modalRef);
 
     const classes = createUseStyles(styles)({
         fluid, maxHeight, minHeight, maxWidth, minWidth,
     });
 
+    useEffect(() => {
+        addModal(modalRef);
+    }, [modalRef]);
+
+    const escPressed = handleEscPress(closable, modalRef);
     const closeModal = useCallback(() => {
+        if (!closable || !onClose) {
+            return;
+        }
         removeModal(modalRef);
         onClose();
-    }, []);
-
-    useEffect(() => { addModal(modalRef); }, [modalRef]);
+    }, [closable, onClose, modalRef]);
 
     useEffect(() => {
         if (escPressed) {
@@ -54,22 +59,25 @@ const Modal = ({
     }, [escPressed]);
 
     return createPortal(
-        <div className={classNames(classes.wrapper, customStyles.wrapper)}>
+        <div className={classNames(classes.wrapper, customClassNames.wrapper)}>
             <div
                 ref={modalRef}
-                className={classNames(classes.modal, customStyles.modal)}
+                className={classNames(classes.modal, customClassNames.modal)}
             >
                 {closable && (
                     <CloseButton
-                        className={customStyles.closeBtn}
-                        onClick={onClose}
+                        className={customClassNames.closeButton}
+                        onClick={closeModal}
                     />
                 )}
                 {header && header}
                 {content && content}
                 {footer && footer}
             </div>
-            <Overlay onClick={onClose} className={customStyles.overlay} />
+            <Overlay
+                onClick={closeModal}
+                className={customClassNames.overlay}
+            />
         </div>, document.body,
     );
 };
@@ -86,7 +94,7 @@ Modal.propTypes = {
     maxWidth: PropTypes.number,
     minWidth: PropTypes.number,
     children: PropTypes.node.isRequired,
-    customStyles: PropTypes.shape({
+    customClassNames: PropTypes.shape({
         wrapper: PropTypes.string,
         modal: PropTypes.string,
         closeBtn: PropTypes.string,
@@ -95,17 +103,17 @@ Modal.propTypes = {
 };
 
 Modal.defaultProps = {
-    onClose: () => {},
+    onClose: null,
     fluid: false,
     closable: true,
     maxHeight: 500,
     minHeight: 100,
     maxWidth: 500,
     minWidth: 200,
-    customStyles: {
+    customClassNames: {
         wrapper: null,
         modal: null,
-        closeBtn: null,
+        closeButton: null,
         overlay: null,
     },
 };
