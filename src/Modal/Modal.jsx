@@ -30,6 +30,7 @@ const Modal = ({
     children,
     customClassNames,
     closeButtonIcon,
+    ...props
 }) => {
     const header = useCallback(getHeader(children), [children]);
     const footer = useCallback(getFooter(children), [children]);
@@ -60,7 +61,10 @@ const Modal = ({
     }, [escPressed]);
 
     return createPortal(
-        <div className={classNames(classes.wrapper, customClassNames.wrapper)}>
+        <div
+            {...props}
+            className={classNames(classes.wrapper, customClassNames.wrapper)}
+        >
             <div
                 ref={modalRef}
                 className={classNames(classes.modal, customClassNames.modal)}
