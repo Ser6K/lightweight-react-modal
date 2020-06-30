@@ -6,7 +6,6 @@ import {
     ModalFooter,
     ModalContent,
     ModalProvider,
-    ModalConsumer,
 } from 'react-modal';
 
 const ModalExample = ({ modal }) => {
@@ -90,6 +89,10 @@ const ModalExample = ({ modal }) => {
     );
 };
 
-const Example = () => <ModalProvider>{ModalConsumer(ModalExample)}</ModalProvider>;
+const Example = () => (
+    <ModalProvider>
+        <ModalExample />
+    </ModalProvider>
+);
 
 render(<Example />, document.getElementById('modal'));

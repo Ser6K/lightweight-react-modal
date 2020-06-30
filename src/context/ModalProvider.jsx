@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import ModalContext from './ModalContext';
+import ModalConsumer from './ModalConsumer';
 
 const ModalProvider = ({ children }) => {
     const [modalList, setModalList] = useState([]);
@@ -9,15 +10,15 @@ const ModalProvider = ({ children }) => {
     const isOpen = name => modalList.includes(name);
     const isClosed = name => !modalList.includes(name);
 
-    const openModal = (name) => {
+    const openModal = useCallback((name) => {
         if (isOpen(name)) {
             return;
         }
 
         setModalList([...modalList, name]);
-    };
+    }, [isOpen, modalList]);
 
-    const closeModal = (name) => {
+    const closeModal = useCallback((name) => {
         if (isClosed(name)) {
             return;
         }
@@ -25,22 +26,22 @@ const ModalProvider = ({ children }) => {
         const newList = modalList.filter(modalName => modalName !== name);
 
         setModalList(newList);
-    };
+    }, [modalList, isClosed]);
 
-    const closeAll = () => {
+    const closeAll = useCallback(() => {
         if (modalList.length > 0) {
             setModalList([]);
         }
-    };
+    }, [modalList]);
 
-    const toggleModal = (name) => {
+    const toggleModal = useCallback((name) => {
         if (isOpen(name)) {
             closeModal(name);
             return;
         }
 
         openModal(name);
-    };
+    }, [isOpen]);
 
     const modal = {
         open: name => openModal(name),
@@ -54,7 +55,9 @@ const ModalProvider = ({ children }) => {
 
     return (
         <ModalContext.Provider value={modal}>
-            {children}
+            <ModalConsumer>
+                {children}
+            </ModalConsumer>
         </ModalContext.Provider>
     );
 };
