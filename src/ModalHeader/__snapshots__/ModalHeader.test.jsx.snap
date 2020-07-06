@@ -2,13 +2,11 @@
 
 exports[`Modal header it matches snapshot with no props 1`] = `
 <ModalHeader>
-  <ModalHeaderstyles__Header>
-    <div
-      className="ModalHeaderstyles__Header-sc-1f4o000-0 hfQxOK"
-    >
-      Header
-    </div>
-  </ModalHeaderstyles__Header>
+  <div
+    className="header"
+  >
+    Header
+  </div>
 </ModalHeader>
 `;
 
@@ -21,24 +19,15 @@ exports[`Modal header it matches snapshot with props 1`] = `
     }
   }
 >
-  <ModalHeaderstyles__Header
-    className="className"
+  <div
+    className="header"
     style={
       Object {
         "display": "inline",
       }
     }
   >
-    <div
-      className="ModalHeaderstyles__Header-sc-1f4o000-0 hfQxOK className"
-      style={
-        Object {
-          "display": "inline",
-        }
-      }
-    >
-      Header
-    </div>
-  </ModalHeaderstyles__Header>
+    Header
+  </div>
 </ModalHeader>
 `;

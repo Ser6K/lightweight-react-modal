@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { HeaderDisplayName } from 'utils';
-import { Header } from './ModalHeader.styles';
+import styles from './ModalHeader.css';
 
 const ModalHeader = React.memo(({ children, ...props }) => (
-    <Header {...props}>
+    <div
+        {...props}
+        className={styles.header}
+    >
         {children}
-    </Header>
+    </div>
 ));
 
 ModalHeader.propTypes = {

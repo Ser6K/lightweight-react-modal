@@ -15,7 +15,7 @@ import {
 import { addModal, removeModal } from 'register';
 import CloseButton from './components/CloseButton/CloseButton';
 import Overlay from './components/Overlay/Overlay';
-import { Wrapper, ModalWrapper } from './Modal.styles';
+import styles from './Modal.css';
 
 const Modal = ({
     onClose,
@@ -55,18 +55,19 @@ const Modal = ({
     }, [escPressed]);
 
     return createPortal(
-        <Wrapper
+        <div
             {...props}
-            {...(!!customClassNames.wrapper === true ? { className: customClassNames.wrapper } : {})}
+            className={styles.wrapper}
         >
-            <ModalWrapper
+            <div
                 ref={modalRef}
-                maxWidth={maxWidth}
-                minWidth={minWidth}
-                maxHeight={maxHeight}
-                minHeight={minHeight}
-                fluid={fluid}
-                {...(!!customClassNames.wrapper === true ? { className: customClassNames.modal } : {})}
+                className={styles.modal}
+                style={{
+                    maxWidth: `${!fluid ? `${maxWidth}px` : ''}`,
+                    minWidth: `${!fluid ? `${minWidth}px` : ''}`,
+                    maxHeight: `${!fluid ? `${maxHeight}px` : ''}`,
+                    minHeight: `${!fluid ? `${minHeight}px` : ''}`,
+                }}
             >
                 {closable && (
                     <CloseButton
@@ -78,12 +79,12 @@ const Modal = ({
                 {header && header}
                 {content && content}
                 {footer && footer}
-            </ModalWrapper>
+            </div>
             <Overlay
                 onClick={closeModal}
                 className={customClassNames.overlay}
             />
-        </Wrapper>, document.body,
+        </div>, document.body,
     );
 };
 

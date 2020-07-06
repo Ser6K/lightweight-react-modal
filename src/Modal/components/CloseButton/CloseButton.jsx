@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from './CloseButton.styles';
+import styles from './CloseButton.css';
 
 const CloseButton = ({ onClick, icon, className }) => (
-    <Button
+    <button
         role="button"
         onClick={onClick}
-        {...(!!className === true ? { className } : {})}
+        className={styles.closeButton}
     >
         {icon ? icon : 'x'}
-    </Button>
+    </button>
 );
 
 CloseButton.propTypes = {

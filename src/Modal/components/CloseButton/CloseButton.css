@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-export const Button = styled.button`
+.closeButton {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -17,4 +15,4 @@ export const Button = styled.button`
         color: black;
         outline: 0;
     }
-`;
+}

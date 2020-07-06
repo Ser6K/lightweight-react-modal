@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { OverlayWrapper } from './Overlay.styles';
+import styles from './Overlay.css';
 
 const Overlay = ({ onClick, className }) => (
-    <OverlayWrapper
+    <div
         onClick={onClick}
-        {...(!!className === true ? { className } : {} )}
+        className={styles.overlay}
     />
 );
 

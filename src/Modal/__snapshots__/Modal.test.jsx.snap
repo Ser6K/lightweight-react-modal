@@ -6,74 +6,64 @@ exports[`Modal snapshots default modal matches snapshot 1`] = `
     containerInfo={
       <body>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 ffLOAg"
+            class="modal"
+            style="max-width: 500px; min-width: 200px; max-height: 500px; min-height: 100px;"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
+            class="overlay"
           />
         </div>
       </body>
     }
   >
-    <Modalstyles__Wrapper>
+    <div
+      className="wrapper"
+    >
       <div
-        className="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+        className="modal"
+        style={
+          Object {
+            "maxHeight": "500px",
+            "maxWidth": "500px",
+            "minHeight": "100px",
+            "minWidth": "200px",
+          }
+        }
       >
-        <Modalstyles__ModalWrapper
-          fluid={false}
-          maxHeight={500}
-          maxWidth={500}
-          minHeight={100}
-          minWidth={200}
-        >
-          <div
-            className="Modalstyles__ModalWrapper-sc-5bf2l8-1 ffLOAg"
-          >
-            <CloseButton
-              className={null}
-              icon={null}
-              onClick={[Function]}
-            >
-              <CloseButtonstyles__Button
-                onClick={[Function]}
-                role="button"
-              >
-                <button
-                  className="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  x
-                </button>
-              </CloseButtonstyles__Button>
-            </CloseButton>
-          </div>
-        </Modalstyles__ModalWrapper>
-        <Overlay
+        <CloseButton
           className={null}
+          icon={null}
           onClick={[Function]}
         >
-          <Overlaystyles__OverlayWrapper
+          <button
+            className="closeButton"
             onClick={[Function]}
+            role="button"
           >
-            <div
-              className="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
-              onClick={[Function]}
-            />
-          </Overlaystyles__OverlayWrapper>
-        </Overlay>
+            x
+          </button>
+        </CloseButton>
       </div>
-    </Modalstyles__Wrapper>
+      <Overlay
+        className={null}
+        onClick={[Function]}
+      >
+        <div
+          className="overlay"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
   </Portal>
 </Modal>
 `;
@@ -86,91 +76,81 @@ exports[`Modal snapshots fluid modal matches snapshot 1`] = `
     containerInfo={
       <body>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 ffLOAg"
+            class="modal"
+            style="max-width: 500px; min-width: 200px; max-height: 500px; min-height: 100px;"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
+            class="overlay"
           />
         </div>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 caGlFr"
+            class="modal"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
+            class="overlay"
           />
         </div>
       </body>
     }
   >
-    <Modalstyles__Wrapper>
+    <div
+      className="wrapper"
+    >
       <div
-        className="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+        className="modal"
+        style={
+          Object {
+            "maxHeight": "",
+            "maxWidth": "",
+            "minHeight": "",
+            "minWidth": "",
+          }
+        }
       >
-        <Modalstyles__ModalWrapper
-          fluid={true}
-          maxHeight={500}
-          maxWidth={500}
-          minHeight={100}
-          minWidth={200}
-        >
-          <div
-            className="Modalstyles__ModalWrapper-sc-5bf2l8-1 caGlFr"
-          >
-            <CloseButton
-              className={null}
-              icon={null}
-              onClick={[Function]}
-            >
-              <CloseButtonstyles__Button
-                onClick={[Function]}
-                role="button"
-              >
-                <button
-                  className="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  x
-                </button>
-              </CloseButtonstyles__Button>
-            </CloseButton>
-          </div>
-        </Modalstyles__ModalWrapper>
-        <Overlay
+        <CloseButton
           className={null}
+          icon={null}
           onClick={[Function]}
         >
-          <Overlaystyles__OverlayWrapper
+          <button
+            className="closeButton"
             onClick={[Function]}
+            role="button"
           >
-            <div
-              className="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
-              onClick={[Function]}
-            />
-          </Overlaystyles__OverlayWrapper>
-        </Overlay>
+            x
+          </button>
+        </CloseButton>
       </div>
-    </Modalstyles__Wrapper>
+      <Overlay
+        className={null}
+        onClick={[Function]}
+      >
+        <div
+          className="overlay"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
   </Portal>
 </Modal>
 `;
@@ -190,130 +170,117 @@ exports[`Modal snapshots modal matches snapshot when custom styles are set 1`] =
     containerInfo={
       <body>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 ffLOAg"
+            class="modal"
+            style="max-width: 500px; min-width: 200px; max-height: 500px; min-height: 100px;"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
+            class="overlay"
           />
         </div>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 caGlFr"
+            class="modal"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
+            class="overlay"
           />
         </div>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 kVKwYK"
+            class="modal"
+            style="max-width: 120px; min-width: 60px; max-height: 100px; min-height: 50px;"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
+            class="overlay"
           />
         </div>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI wrapperClassName"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 ffLOAg modalClassName"
+            class="modal"
+            style="max-width: 500px; min-width: 200px; max-height: 500px; min-height: 100px;"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt closeButtonClassName"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR overlayClassName"
+            class="overlay"
           />
         </div>
       </body>
     }
   >
-    <Modalstyles__Wrapper
-      className="wrapperClassName"
+    <div
+      className="wrapper"
     >
       <div
-        className="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI wrapperClassName"
+        className="modal"
+        style={
+          Object {
+            "maxHeight": "500px",
+            "maxWidth": "500px",
+            "minHeight": "100px",
+            "minWidth": "200px",
+          }
+        }
       >
-        <Modalstyles__ModalWrapper
-          className="modalClassName"
-          fluid={false}
-          maxHeight={500}
-          maxWidth={500}
-          minHeight={100}
-          minWidth={200}
-        >
-          <div
-            className="Modalstyles__ModalWrapper-sc-5bf2l8-1 ffLOAg modalClassName"
-          >
-            <CloseButton
-              className="closeButtonClassName"
-              icon={null}
-              onClick={[Function]}
-            >
-              <CloseButtonstyles__Button
-                className="closeButtonClassName"
-                onClick={[Function]}
-                role="button"
-              >
-                <button
-                  className="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt closeButtonClassName"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  x
-                </button>
-              </CloseButtonstyles__Button>
-            </CloseButton>
-          </div>
-        </Modalstyles__ModalWrapper>
-        <Overlay
-          className="overlayClassName"
+        <CloseButton
+          className="closeButtonClassName"
+          icon={null}
           onClick={[Function]}
         >
-          <Overlaystyles__OverlayWrapper
-            className="overlayClassName"
+          <button
+            className="closeButton"
             onClick={[Function]}
+            role="button"
           >
-            <div
-              className="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR overlayClassName"
-              onClick={[Function]}
-            />
-          </Overlaystyles__OverlayWrapper>
-        </Overlay>
+            x
+          </button>
+        </CloseButton>
       </div>
-    </Modalstyles__Wrapper>
+      <Overlay
+        className="overlayClassName"
+        onClick={[Function]}
+      >
+        <div
+          className="overlay"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
   </Portal>
 </Modal>
 `;
@@ -329,108 +296,99 @@ exports[`Modal snapshots modal matches snapshot when maxHeight/minHeight/maxWidt
     containerInfo={
       <body>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 ffLOAg"
+            class="modal"
+            style="max-width: 500px; min-width: 200px; max-height: 500px; min-height: 100px;"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
+            class="overlay"
           />
         </div>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 caGlFr"
+            class="modal"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
+            class="overlay"
           />
         </div>
         <div
-          class="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+          class="wrapper"
         >
           <div
-            class="Modalstyles__ModalWrapper-sc-5bf2l8-1 kVKwYK"
+            class="modal"
+            style="max-width: 120px; min-width: 60px; max-height: 100px; min-height: 50px;"
           >
             <button
-              class="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
+              class="closeButton"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
+            class="overlay"
           />
         </div>
       </body>
     }
   >
-    <Modalstyles__Wrapper>
+    <div
+      className="wrapper"
+    >
       <div
-        className="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
+        className="modal"
+        style={
+          Object {
+            "maxHeight": "100px",
+            "maxWidth": "120px",
+            "minHeight": "50px",
+            "minWidth": "60px",
+          }
+        }
       >
-        <Modalstyles__ModalWrapper
-          fluid={false}
-          maxHeight={100}
-          maxWidth={120}
-          minHeight={50}
-          minWidth={60}
-        >
-          <div
-            className="Modalstyles__ModalWrapper-sc-5bf2l8-1 kVKwYK"
-          >
-            <CloseButton
-              className={null}
-              icon={null}
-              onClick={[Function]}
-            >
-              <CloseButtonstyles__Button
-                onClick={[Function]}
-                role="button"
-              >
-                <button
-                  className="CloseButtonstyles__Button-sc-1sd1qj0-0 pzudt"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  x
-                </button>
-              </CloseButtonstyles__Button>
-            </CloseButton>
-          </div>
-        </Modalstyles__ModalWrapper>
-        <Overlay
+        <CloseButton
           className={null}
+          icon={null}
           onClick={[Function]}
         >
-          <Overlaystyles__OverlayWrapper
+          <button
+            className="closeButton"
             onClick={[Function]}
+            role="button"
           >
-            <div
-              className="Overlaystyles__OverlayWrapper-sc-268q0n-0 giiUMR"
-              onClick={[Function]}
-            />
-          </Overlaystyles__OverlayWrapper>
-        </Overlay>
+            x
+          </button>
+        </CloseButton>
       </div>
-    </Modalstyles__Wrapper>
+      <Overlay
+        className={null}
+        onClick={[Function]}
+      >
+        <div
+          className="overlay"
+          onClick={[Function]}
+        />
+      </Overlay>
+    </div>
   </Portal>
 </Modal>
 `;

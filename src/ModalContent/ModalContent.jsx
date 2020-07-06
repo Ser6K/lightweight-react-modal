@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ContentDisplayName } from 'utils';
-import { Content } from './ModalContent.styles';
+import styles from './ModalContent.css';
 
 const ModalContent = React.memo(({ children, ...props }) => (
-    <Content {...props}>
+    <div className={styles.content}>
         {children}
-    </Content>
+    </div>
 ));
 
 ModalContent.propTypes = {
