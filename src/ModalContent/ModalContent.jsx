@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { createUseStyles } from 'react-jss';
-import { ContentDisplayName } from '../utils/utils';
+import { ContentDisplayName, classNames } from 'utils';
 import styles from './ModalContent.styles';
 
 const ModalContent = ({ children, className, ...props }) => {

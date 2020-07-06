@@ -1,7 +1,7 @@
 import React from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
+import { classNames } from 'utils';
 import styles from './CloseButton.styles';
 
 const CloseButton = ({ onClick, icon, className }) => {

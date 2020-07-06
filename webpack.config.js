@@ -23,6 +23,10 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx'],
+        alias: {
+            utils: path.resolve(__dirname, './src/utils/utils'),
+            register: path.resolve(__dirname, './src/utils/register'),
+        },
     },
     node: {
         fs: 'empty',

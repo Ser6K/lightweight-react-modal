@@ -9,5 +9,9 @@ module.exports = {
     testPathIgnorePatterns: ['\\\\node_modules\\\\'],
     transformIgnorePatterns: ['<rootDir>/node_modules/'],
     verbose: false,
-    snapshotSerializers: ["enzyme-to-json/serializer"]
+    snapshotSerializers: ["enzyme-to-json/serializer"],
+    moduleNameMapper: {
+        "^utils$": "<rootDir>/src/utils/utils.js",
+        "^register$": "<rootDir>/src/utils/register.js",
+    },
 };

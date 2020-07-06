@@ -5,7 +5,6 @@ import React, {
     useRef,
 } from 'react';
 import { createPortal } from 'react-dom';
-import classNames from 'classnames';
 import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
 import {
@@ -13,8 +12,9 @@ import {
     getFooter,
     getContent,
     handleEscPress,
-} from '../utils/utils';
-import { addModal, removeModal } from '../utils/register';
+} from 'utils';
+import { addModal, removeModal } from 'register';
+import { classNames } from 'utils';
 import CloseButton from './components/CloseButton/CloseButton';
 import Overlay from './components/Overlay/Overlay';
 import styles from './Modal.styles';

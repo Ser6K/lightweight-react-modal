@@ -1,6 +1,6 @@
 {
   "name": "lightweight-react-modal",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "lightweight react modal",
   "main": "index.js",
   "module": "index.js",
@@ -52,7 +52,6 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
     "global": "^4.4.0",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",

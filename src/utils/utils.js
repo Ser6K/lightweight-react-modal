@@ -54,3 +54,5 @@ export const handleEscPress = (closable, ref) => {
 
     return escPressed;
 };
+
+export const classNames = (...classes) => classes.filter(value => !!value === true).join(' ');

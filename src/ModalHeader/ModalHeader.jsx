@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { createUseStyles } from 'react-jss';
-import { HeaderDisplayName } from '../utils/utils';
+import { HeaderDisplayName, classNames } from 'utils';
 import styles from './ModalHeader.styles';
 
 const ModalHeader = ({ children, className, ...props }) => {

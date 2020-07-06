@@ -3,7 +3,7 @@ import { act } from 'react-dom/test-utils';
 import { shallow, mount } from 'enzyme';
 import document from 'global/document';
 import ReactDom from 'react-dom';
-import * as ModalRegister from '../utils/register';
+import * as ModalRegister from 'register';
 import Modal from './Modal';
 import ModalHeader from '../ModalHeader/ModalHeader';
 import ModalFooter from '../ModalFooter/ModalFooter';
