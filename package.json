@@ -1,6 +1,6 @@
 {
   "name": "lightweight-react-modal",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "lightweight react modal",
   "main": "index.js",
   "module": "index.js",
@@ -10,7 +10,8 @@
     "build:watch": "webpack --mode=development --watch",
     "test": "jest",
     "test:watch": "jest --verbose --watch",
-    "test:coverage": "jest --coverage --colors"
+    "test:coverage": "jest --coverage --colors",
+    "npm-publish": "npm test && npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
