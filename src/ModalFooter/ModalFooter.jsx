@@ -1,20 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FooterDisplayName } from 'utils';
+import { FooterDisplayName, classNames } from 'utils';
 import styles from './ModalFooter.css';
 
-const ModalFooter = React.memo(({ children, ...props }) => (
+const ModalFooter = ({ children, className, ...props }) => (
     <div
         {...props}
-        className={styles.footer}
+        className={classNames(styles.footer, className)}
     >
         {children}
     </div>
-));
+);
 
 ModalFooter.propTypes = {
     children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+};
+
+ModalFooter.defaultProps = {
+    className: null,
 };
 
 ModalFooter.displayName = FooterDisplayName;
-export default ModalFooter;
+export default React.memo(ModalFooter);

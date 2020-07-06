@@ -13,6 +13,7 @@ import {
     handleEscPress,
 } from 'utils';
 import { addModal, removeModal } from 'register';
+import { classNames } from 'utils';
 import CloseButton from './components/CloseButton/CloseButton';
 import Overlay from './components/Overlay/Overlay';
 import styles from './Modal.css';
@@ -57,11 +58,11 @@ const Modal = ({
     return createPortal(
         <div
             {...props}
-            className={styles.wrapper}
+            className={classNames(styles.wrapper, customClassNames.wrapper)}
         >
             <div
                 ref={modalRef}
-                className={styles.modal}
+                className={classNames(styles.modal, customClassNames.modal)}
                 style={{
                     maxWidth: `${!fluid ? `${maxWidth}px` : ''}`,
                     minWidth: `${!fluid ? `${minWidth}px` : ''}`,

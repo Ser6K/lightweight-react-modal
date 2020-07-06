@@ -223,31 +223,31 @@ exports[`Modal snapshots modal matches snapshot when custom styles are set 1`] =
           />
         </div>
         <div
-          class="wrapper"
+          class="wrapper wrapperClassName"
         >
           <div
-            class="modal"
+            class="modal modalClassName"
             style="max-width: 500px; min-width: 200px; max-height: 500px; min-height: 100px;"
           >
             <button
-              class="closeButton"
+              class="closeButton closeButtonClassName"
               role="button"
             >
               x
             </button>
           </div>
           <div
-            class="overlay"
+            class="overlay overlayClassName"
           />
         </div>
       </body>
     }
   >
     <div
-      className="wrapper"
+      className="wrapper wrapperClassName"
     >
       <div
-        className="modal"
+        className="modal modalClassName"
         style={
           Object {
             "maxHeight": "500px",
@@ -263,7 +263,7 @@ exports[`Modal snapshots modal matches snapshot when custom styles are set 1`] =
           onClick={[Function]}
         >
           <button
-            className="closeButton"
+            className="closeButton closeButtonClassName"
             onClick={[Function]}
             role="button"
           >
@@ -276,7 +276,7 @@ exports[`Modal snapshots modal matches snapshot when custom styles are set 1`] =
         onClick={[Function]}
       >
         <div
-          className="overlay"
+          className="overlay overlayClassName"
           onClick={[Function]}
         />
       </Overlay>

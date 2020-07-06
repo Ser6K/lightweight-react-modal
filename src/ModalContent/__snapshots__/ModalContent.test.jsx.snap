@@ -20,7 +20,12 @@ exports[`Modal content it matches snapshot with props 1`] = `
   }
 >
   <div
-    className="content"
+    className="content className"
+    style={
+      Object {
+        "display": "inline",
+      }
+    }
   >
     Content
   </div>

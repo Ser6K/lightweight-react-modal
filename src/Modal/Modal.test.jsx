@@ -87,7 +87,6 @@ describe('Modal general', () => {
                 <ModalFooter>Footer</ModalFooter>
             </Modal>
         );
-
         expect(modal.find('ModalHeader').text()).toBe('Header');
         expect(modal.find('ModalContent').text()).toBe('Content');
         expect(modal.find('ModalFooter').text()).toBe('Footer');

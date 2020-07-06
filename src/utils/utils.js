@@ -15,7 +15,7 @@ const getNestedComponentByName = (name, children) => {
             return null;
         }
 
-        if (get(child, 'type.displayName') && child.type.displayName === name) {
+        if (get(child, 'type.type.displayName') && child.type.type.displayName === name) {
             component = child;
         }
     });
@@ -54,3 +54,5 @@ export const handleEscPress = (closable, ref) => {
 
     return escPressed;
 };
+
+export const classNames = (...classes) => classes.filter(value => !!value === true).join(' ');

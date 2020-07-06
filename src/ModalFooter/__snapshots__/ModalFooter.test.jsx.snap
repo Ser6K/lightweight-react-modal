@@ -20,7 +20,7 @@ exports[`Modal footer it matches snapshot with props 1`] = `
   }
 >
   <div
-    className="footer"
+    className="footer className"
     style={
       Object {
         "display": "inline",

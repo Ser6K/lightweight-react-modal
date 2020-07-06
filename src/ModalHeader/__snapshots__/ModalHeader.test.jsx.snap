@@ -20,7 +20,7 @@ exports[`Modal header it matches snapshot with props 1`] = `
   }
 >
   <div
-    className="header"
+    className="header className"
     style={
       Object {
         "display": "inline",
