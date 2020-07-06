@@ -1,7 +1,7 @@
 {
-  "name": "react-modal",
+  "name": "lightweight-react-modal",
   "version": "1.0.0",
-  "description": "react modal",
+  "description": "lightweight react modal",
   "main": "index.js",
   "module": "index.js",
   "jsnext:main": "index.js",
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ladderok34/react-modal.git"
+    "url": "git+https://github.com/ladderok34/lightweight-react-modal.git"
   },
   "author": "Sergejs Klackovkis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ladderok34/react-modal/issues"
+    "url": "https://github.com/ladderok34/lightweight-react-modal/issues"
   },
   "keywords": [
     "modal",

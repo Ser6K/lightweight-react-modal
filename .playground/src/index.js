@@ -7,7 +7,7 @@ import {
     ModalContent,
     ModalProvider,
     useModalContext,
-} from 'react-modal';
+} from 'lightweight-react-modal';
 
 const ModalExample = () => {
     const [showHeader, setShowHeader] = useState(false);

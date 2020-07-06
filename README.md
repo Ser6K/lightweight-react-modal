@@ -1,13 +1,13 @@
 # React Modal
 
-React modal component
+Lightweight react modal component.
 
 
 ## Installation
 
 
 ```bash
-npm i react-modal
+npm i lightweight-react-modal
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ import {
     ModalHeader,
     ModalContent,
     ModalFooter,
-} from 'react-modal';
+} from 'lightweight-react-modal';
 
 <Modal>
     <ModalHeader>
@@ -76,7 +76,7 @@ import {
     Modal,
     ModalContent,
     ModalProvider,
-} from 'react-modal';
+} from 'lightweight-react-modal';
 
 const ModalExample = ({ modal }) => (
     <>
@@ -115,7 +115,7 @@ import {
     ModalContent,
     ModalProvider,
     useModalContext,
-} from 'react-modal';
+} from 'lightweight-react-modal';
 
 const ModalHookExample = ({ modal }) => {
     const modal = useModalContext();
