@@ -1,8 +1,8 @@
-export default {
-    footer: {
-        flexShrink: 0,
-        borderTop: '1px solid grey',
-        padding: '15px 20px',
-        boxSizing: 'borderBox',
-    },
-};
+import styled from 'styled-components';
+
+export const Footer = styled.div`
+    flex-shrink: 0;
+    border-top: 1px solid grey;
+    padding: 15px 20px;
+    box-sizing: border-box;
+`;

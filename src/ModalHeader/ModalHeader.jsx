@@ -1,20 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createUseStyles } from 'react-jss';
 import { HeaderDisplayName, classNames } from 'utils';
-import styles from './ModalHeader.styles';
+import { Header } from './ModalHeader.styles';
 
-const ModalHeader = ({ children, className, ...props }) => {
-    const classes = createUseStyles(styles)();
-    return (
-        <div
-            {...props}
-            className={classNames(classes.header, className)}
-        >
-            {children}
-        </div>
-    );
-};
+const ModalHeader = ({ children, className, ...props }) => (
+    <Header
+        {...props}
+        className={classNames(className)}
+    >
+        {children}
+    </Header>
+);
 
 ModalHeader.propTypes = {
     children: PropTypes.node.isRequired,

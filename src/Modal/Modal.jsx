@@ -5,7 +5,6 @@ import React, {
     useRef,
 } from 'react';
 import { createPortal } from 'react-dom';
-import { createUseStyles } from 'react-jss';
 import PropTypes from 'prop-types';
 import {
     getHeader,
@@ -17,7 +16,7 @@ import { addModal, removeModal } from 'register';
 import { classNames } from 'utils';
 import CloseButton from './components/CloseButton/CloseButton';
 import Overlay from './components/Overlay/Overlay';
-import styles from './Modal.styles';
+import { Wrapper, ModalWrapper } from './Modal.styles';
 
 const Modal = ({
     onClose,
@@ -36,10 +35,6 @@ const Modal = ({
     const footer = useCallback(getFooter(children), [children]);
     const content = useCallback(getContent(children), [children]);
     const modalRef = useRef();
-
-    const classes = createUseStyles(styles)({
-        fluid, maxHeight, minHeight, maxWidth, minWidth,
-    });
 
     useEffect(() => {
         addModal(modalRef);
@@ -61,13 +56,18 @@ const Modal = ({
     }, [escPressed]);
 
     return createPortal(
-        <div
+        <Wrapper
             {...props}
-            className={classNames(classes.wrapper, customClassNames.wrapper)}
+            className={classNames(customClassNames.wrapper)}
         >
-            <div
+            <ModalWrapper
                 ref={modalRef}
-                className={classNames(classes.modal, customClassNames.modal)}
+                maxWidth={maxWidth}
+                minWidth={minWidth}
+                maxHeight={maxHeight}
+                minHeight={minHeight}
+                fluid={fluid}
+                className={classNames(customClassNames.modal)}
             >
                 {closable && (
                     <CloseButton
@@ -79,12 +79,12 @@ const Modal = ({
                 {header && header}
                 {content && content}
                 {footer && footer}
-            </div>
+            </ModalWrapper>
             <Overlay
                 onClick={closeModal}
                 className={customClassNames.overlay}
             />
-        </div>, document.body,
+        </Wrapper>, document.body,
     );
 };
 

@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createUseStyles } from 'react-jss';
 import { classNames } from 'utils';
-import styles from './CloseButton.styles';
+import { Button } from './CloseButton.styles';
 
-const CloseButton = ({ onClick, icon, className }) => {
-    const classes = createUseStyles(styles)();
-
-    return (
-        <button
-            role="button"
-            className={classNames(classes.close, className)}
-            onClick={onClick}
-        >
-            {icon ? icon : 'x'}
-        </button>
-    );
-};
+const CloseButton = ({ onClick, icon, className }) => (
+    <Button
+        role="button"
+        className={classNames(className)}
+        onClick={onClick}
+    >
+        {icon ? icon : 'x'}
+    </Button>
+);
 
 CloseButton.propTypes = {
     className: PropTypes.string,

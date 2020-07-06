@@ -1,21 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createUseStyles } from 'react-jss';
 import { ContentDisplayName, classNames } from 'utils';
-import styles from './ModalContent.styles';
+import { Content } from './ModalContent.styles';
 
-const ModalContent = ({ children, className, ...props }) => {
-    const classes = createUseStyles(styles)();
-
-    return (
-        <div
-            {...props}
-            className={classNames(classes.content, className)}
-        >
-            {children}
-        </div>
-    );
-};
+const ModalContent = ({ children, className, ...props }) => (
+    <Content
+        {...props}
+        className={classNames(className)}
+    >
+        {children}
+    </Content>
+);
 
 ModalContent.propTypes = {
     children: PropTypes.node.isRequired,

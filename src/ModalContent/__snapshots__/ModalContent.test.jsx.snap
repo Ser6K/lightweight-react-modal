@@ -2,11 +2,15 @@
 
 exports[`Modal content it matches snapshot with no props 1`] = `
 <ModalContent>
-  <div
-    className="content-0-2-1"
+  <ModalContentstyles__Content
+    className=""
   >
-    Content
-  </div>
+    <div
+      className="ModalContentstyles__Content-sc-1qqxn71-0 eZsTTH"
+    >
+      Content
+    </div>
+  </ModalContentstyles__Content>
 </ModalContent>
 `;
 
@@ -19,15 +23,24 @@ exports[`Modal content it matches snapshot with props 1`] = `
     }
   }
 >
-  <div
-    className="content-0-2-2 className"
+  <ModalContentstyles__Content
+    className="className"
     style={
       Object {
         "display": "inline",
       }
     }
   >
-    Content
-  </div>
+    <div
+      className="ModalContentstyles__Content-sc-1qqxn71-0 eZsTTH className"
+      style={
+        Object {
+          "display": "inline",
+        }
+      }
+    >
+      Content
+    </div>
+  </ModalContentstyles__Content>
 </ModalContent>
 `;
