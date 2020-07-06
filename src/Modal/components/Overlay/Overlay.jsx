@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { classNames } from 'utils';
 import { OverlayWrapper } from './Overlay.styles';
 
-const Overlay = ({ onClick, className }) => <OverlayWrapper onClick={onClick} className={classNames(className)} />;
+const Overlay = ({ onClick, className }) => (
+    <OverlayWrapper
+        onClick={onClick}
+        {...(!!className === true ? { className } : {} )}
+    />
+);
 
 Overlay.propTypes = {
     onClick: PropTypes.func,

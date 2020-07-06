@@ -45,6 +45,9 @@ const ModalExample = () => {
                     onClose={() => { modal.close('dialog') }}
                     maxHeight={500}
                     maxWidth={500}
+                    customClassNames={{
+                        overlay: 'test',
+                    }}
                 >
                     {showHeader && (
                         <ModalHeader>

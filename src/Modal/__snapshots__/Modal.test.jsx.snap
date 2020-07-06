@@ -25,14 +25,11 @@ exports[`Modal snapshots default modal matches snapshot 1`] = `
       </body>
     }
   >
-    <Modalstyles__Wrapper
-      className=""
-    >
+    <Modalstyles__Wrapper>
       <div
         className="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
       >
         <Modalstyles__ModalWrapper
-          className=""
           fluid={false}
           maxHeight={500}
           maxWidth={500}
@@ -48,7 +45,6 @@ exports[`Modal snapshots default modal matches snapshot 1`] = `
               onClick={[Function]}
             >
               <CloseButtonstyles__Button
-                className=""
                 onClick={[Function]}
                 role="button"
               >
@@ -68,7 +64,6 @@ exports[`Modal snapshots default modal matches snapshot 1`] = `
           onClick={[Function]}
         >
           <Overlaystyles__OverlayWrapper
-            className=""
             onClick={[Function]}
           >
             <div
@@ -127,14 +122,11 @@ exports[`Modal snapshots fluid modal matches snapshot 1`] = `
       </body>
     }
   >
-    <Modalstyles__Wrapper
-      className=""
-    >
+    <Modalstyles__Wrapper>
       <div
         className="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
       >
         <Modalstyles__ModalWrapper
-          className=""
           fluid={true}
           maxHeight={500}
           maxWidth={500}
@@ -150,7 +142,6 @@ exports[`Modal snapshots fluid modal matches snapshot 1`] = `
               onClick={[Function]}
             >
               <CloseButtonstyles__Button
-                className=""
                 onClick={[Function]}
                 role="button"
               >
@@ -170,7 +161,6 @@ exports[`Modal snapshots fluid modal matches snapshot 1`] = `
           onClick={[Function]}
         >
           <Overlaystyles__OverlayWrapper
-            className=""
             onClick={[Function]}
           >
             <div
@@ -392,14 +382,11 @@ exports[`Modal snapshots modal matches snapshot when maxHeight/minHeight/maxWidt
       </body>
     }
   >
-    <Modalstyles__Wrapper
-      className=""
-    >
+    <Modalstyles__Wrapper>
       <div
         className="Modalstyles__Wrapper-sc-5bf2l8-0 jIsDqI"
       >
         <Modalstyles__ModalWrapper
-          className=""
           fluid={false}
           maxHeight={100}
           maxWidth={120}
@@ -415,7 +402,6 @@ exports[`Modal snapshots modal matches snapshot when maxHeight/minHeight/maxWidt
               onClick={[Function]}
             >
               <CloseButtonstyles__Button
-                className=""
                 onClick={[Function]}
                 role="button"
               >
@@ -435,7 +421,6 @@ exports[`Modal snapshots modal matches snapshot when maxHeight/minHeight/maxWidt
           onClick={[Function]}
         >
           <Overlaystyles__OverlayWrapper
-            className=""
             onClick={[Function]}
           >
             <div

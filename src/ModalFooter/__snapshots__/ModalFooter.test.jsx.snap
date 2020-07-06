@@ -2,9 +2,7 @@
 
 exports[`Modal footer it matches snapshot with no props 1`] = `
 <ModalFooter>
-  <ModalFooterstyles__Footer
-    className=""
-  >
+  <ModalFooterstyles__Footer>
     <div
       className="ModalFooterstyles__Footer-sc-1ls2gha-0 gkRbig"
     >

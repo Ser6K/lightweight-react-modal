@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { classNames } from 'utils';
 import { Button } from './CloseButton.styles';
 
 const CloseButton = ({ onClick, icon, className }) => (
     <Button
         role="button"
-        className={classNames(className)}
         onClick={onClick}
+        {...(!!className === true ? { className } : {})}
     >
         {icon ? icon : 'x'}
     </Button>
