@@ -1,36 +1,58 @@
 import React, {
-    useState,
     useCallback,
     useEffect,
     useRef,
 } from 'react';
 import { createPortal } from 'react-dom';
-import PropTypes from 'prop-types';
 import {
     getHeader,
     getFooter,
     getContent,
     handleEscPress,
+    classNames,
 } from 'utils';
 import { addModal, removeModal } from 'register';
-import { classNames } from 'utils';
 import CloseButton from './components/CloseButton/CloseButton';
 import Overlay from './components/Overlay/Overlay';
-import styles from './Modal.css';
+import * as styles from './Modal.css';
+
+interface ModalProps {
+    onClose?: () => {};
+    fluid?: boolean;
+    closable?: boolean;
+    maxHeight?: number;
+    minHeight?: number;
+    maxWidth?: number;
+    minWidth?: number;
+    children: React.ReactNode;
+    customClassNames?: {
+        wrapper: string,
+        modal: string,
+        closeBtn: string,
+        overlay: string,
+    };
+    closeButtonIcon?: React.ReactNode;
+    [propName: string]: any;
+};
 
 const Modal = ({
-    onClose,
-    fluid,
-    closable,
-    maxHeight,
-    minHeight,
-    maxWidth,
-    minWidth,
-    children,
-    customClassNames,
-    closeButtonIcon,
+    onClose = null,
+    fluid = false,
+    closable = true,
+    maxHeight = 500,
+    minHeight = 100,
+    maxWidth = 500,
+    minWidth = 200,
+    children = null,
+    customClassNames = {
+        wrapper: null,
+        modal: null,
+        closeBtn: null,
+        overlay: null,
+    },
+    closeButtonIcon = null,
     ...props
-}) => {
+}: ModalProps) => {
     const header = useCallback(getHeader(children), [children]);
     const footer = useCallback(getFooter(children), [children]);
     const content = useCallback(getContent(children), [children]);
@@ -41,6 +63,7 @@ const Modal = ({
     }, [modalRef]);
 
     const escPressed = handleEscPress(closable, modalRef);
+
     const closeModal = useCallback(() => {
         if (!closable || !onClose) {
             return;
@@ -72,7 +95,7 @@ const Modal = ({
             >
                 {closable && (
                     <CloseButton
-                        className={customClassNames.closeButton}
+                        className={customClassNames.closeBtn}
                         onClick={closeModal}
                         icon={closeButtonIcon}
                     />
@@ -87,44 +110,6 @@ const Modal = ({
             />
         </div>, document.body,
     );
-};
-
-Modal.propTypes = {
-    onClose: PropTypes.func,
-    fluid: PropTypes.bool,
-    closable: PropTypes.bool,
-    maxHeight: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string,
-    ]),
-    minHeight: PropTypes.number,
-    maxWidth: PropTypes.number,
-    minWidth: PropTypes.number,
-    children: PropTypes.node.isRequired,
-    customClassNames: PropTypes.shape({
-        wrapper: PropTypes.string,
-        modal: PropTypes.string,
-        closeBtn: PropTypes.string,
-        overlay: PropTypes.string,
-    }),
-    closeButtonIcon: PropTypes.node,
-};
-
-Modal.defaultProps = {
-    onClose: null,
-    fluid: false,
-    closable: true,
-    maxHeight: 500,
-    minHeight: 100,
-    maxWidth: 500,
-    minWidth: 200,
-    customClassNames: {
-        wrapper: null,
-        modal: null,
-        closeButton: null,
-        overlay: null,
-    },
-    closeButtonIcon: null,
 };
 
 Modal.displayName = 'Modal';

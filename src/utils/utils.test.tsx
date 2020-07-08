@@ -24,9 +24,9 @@ describe('get header, footer, content', () => {
     });
 
     test('it returns null if nested component is empty', () => {
-        const headerComponent = <ModalHeader />;
-        const contentComponent = <ModalContent />;
-        const footerComponent = <ModalFooter />;
+        const headerComponent = <ModalHeader><></></ModalHeader>;
+        const contentComponent = <ModalContent><></></ModalContent>;
+        const footerComponent = <ModalFooter><></></ModalFooter>;
 
         expect(getHeader(headerComponent.props.children)).toBe(null);
         expect(getHeader(contentComponent.props.children)).toBe(null);

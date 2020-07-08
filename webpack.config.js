@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
     target: 'node',
     devtool: false,
-    entry: path.resolve(__dirname, './src/index.js'),
+    entry: path.resolve(__dirname, './src/index.ts'),
     output: {
         path: path.resolve(__dirname),
         filename: 'index.js',
@@ -20,9 +20,15 @@ module.exports = {
                 use: 'babel-loader',
             },
             {
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                use: 'ts-loader',
+            },
+            {
                 test: /\.css$/i,
                 use: [
                     'style-loader',
+                    '@teamsupercell/typings-for-css-modules-loader',
                     {
                         loader: 'css-loader',
                         options: {
@@ -31,13 +37,13 @@ module.exports = {
                                 localIdentName: '[name]__[local]___[hash:base64:5]',
                             },
                         },
-                    }
+                    },
                 ],
             },
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         alias: {
             utils: path.resolve(__dirname, './src/utils/utils'),
             register: path.resolve(__dirname, './src/utils/register'),
@@ -62,13 +68,6 @@ module.exports = {
             commonjs: 'react-dom',
             amd: 'react-dom',
             umd: 'react-dom',
-        },
-        'prop-types': {
-            root: 'PropTypes',
-            commonjs2: 'prop-types',
-            commonjs: 'prop-types',
-            amd: 'prop-types',
-            umd: 'prop-types',
         },
     },
 };

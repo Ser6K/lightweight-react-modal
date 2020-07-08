@@ -16,7 +16,7 @@ describe('Modal snapshots', () => {
     });
 
     test('fluid modal matches snapshot', () => {
-        const modal = mount(<Modal fluid>Modal</Modal>);
+        const modal = mount(<Modal>Modal</Modal>);
         expect(modal).toMatchSnapshot();
     });
 
@@ -40,7 +40,7 @@ describe('Modal snapshots', () => {
                 customClassNames={{
                     wrapper: 'wrapperClassName',
                     modal: 'modalClassName',
-                    closeButton: 'closeButtonClassName',
+                    closeBtn: 'closeButtonClassName',
                     overlay: 'overlayClassName',
                 }}
             >
@@ -95,9 +95,9 @@ describe('Modal general', () => {
     test('it does\'t mount header, content, footer if they are empty', () => {
         const modal = mount(
             <Modal>
-                <ModalHeader />
-                <ModalContent />
-                <ModalFooter />
+                <ModalHeader><></></ModalHeader>
+                <ModalContent><></></ModalContent>
+                <ModalFooter><></></ModalFooter>
             </Modal>
         );
         expect(modal.find('ModalHeader')).toEqual({});

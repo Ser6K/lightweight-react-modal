@@ -1,14 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useCallback, FunctionComponent } from 'react';
 import ModalContext from './ModalContext';
 import ModalConsumer from './ModalConsumer';
 
-const ModalProvider = ({ children }) => {
-    const [modalList, setModalList] = useState([]);
-    const [lastOpen, setLastOpen] = useState(null);
+type ModalProviderProps = {
+    children: React.ReactNode,
+};
 
-    const isOpen = name => modalList.includes(name);
-    const isClosed = name => !modalList.includes(name);
+const ModalProvider: FunctionComponent<ModalProviderProps> = ({ children }) => {
+    const [modalList, setModalList] = useState([]);
+
+    const isOpen = (name: string) => modalList.includes(name);
+    const isClosed = (name: string) => !modalList.includes(name);
 
     const openModal = useCallback((name) => {
         if (isOpen(name)) {
@@ -44,12 +46,12 @@ const ModalProvider = ({ children }) => {
     }, [isOpen]);
 
     const modal = {
-        open: name => openModal(name),
-        close: name => closeModal(name),
-        toggle: name => toggleModal(name),
+        open: (name: string) => openModal(name),
+        close: (name: string) => closeModal(name),
+        toggle: (name: string) => toggleModal(name),
         closeAll: () => closeAll(),
-        isOpen: name => isOpen(name),
-        isClose: name => isClosed(name),
+        isOpen: (name: string) => isOpen(name),
+        isClose: (name: string) => isClosed(name),
         list: modalList,
     };
 
@@ -60,10 +62,6 @@ const ModalProvider = ({ children }) => {
             </ModalConsumer>
         </ModalContext.Provider>
     );
-};
-
-ModalProvider.propTypes = {
-    children: PropTypes.node.isRequired,
 };
 
 export default React.memo(ModalProvider);
