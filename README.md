@@ -2,16 +2,13 @@
 
 Lightweight react modal component.
 
-
 ## Installation
-
 
 ```bash
 npm i lightweight-react-modal
 ```
 
 ## Usage
-
 
 ```jsx static
 import React from 'react';
@@ -35,7 +32,6 @@ import {
 </Modal>
 ```
 
-
 ## PropTypes
 
 ##### Modal
@@ -49,9 +45,8 @@ import {
 | minHeight | number | Sets modal min height. | 100 |
 | maxWidth | number | Sets modal max width. | 500 |
 | minWidth | number | Sets modal min width. | 200 |
-| customClassNames | shape({ wrapper: string, modal: string, closeBtn: string, overlay:string }) | Modal custom classNames. | null |
+| customClassNames | { wrapper: string, modal: string, closeBtn: string, overlay:string } | Modal custom classNames. | null |
 | closeButtonIcon | node | Modifies close button icon. | null |
-
 
 ##### ModalHeader, ModalContent, ModalFooter.
 
@@ -61,9 +56,8 @@ import {
 
 ## Modal Context
 
-You can use ModalContext to get better control of modal in your application.
+You can use ModalContext to have better control of modal state in your application.
 With help of ModalContext you can trigger one or multiple modals from anywhere in our application.
-
 
 ## Usage
 
