@@ -15,11 +15,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: 'babel-loader',
-            },
-            {
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
                 use: 'ts-loader',
@@ -43,7 +38,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.js', '.ts', '.tsx'],
         alias: {
             utils: path.resolve(__dirname, './src/utils/utils'),
             register: path.resolve(__dirname, './src/utils/register'),

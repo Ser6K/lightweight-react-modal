@@ -1,6 +1,7 @@
 # React Modal
 
-Lightweight react modal component.
+Lightweight react modal component. <br />
+Demo can be found here: <a href="https://ladderok34.github.io/lightweight-react-modal">Click</a>
 
 ## Installation
 
