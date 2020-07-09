@@ -17,7 +17,7 @@ import Overlay from './components/Overlay/Overlay';
 import * as styles from './Modal.css';
 
 interface ModalProps {
-    onClose?: () => {};
+    onClose?: () => void;
     fluid?: boolean;
     closable?: boolean;
     maxHeight?: number;
