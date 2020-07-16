@@ -1,6 +1,6 @@
 {
   "name": "lightweight-react-modal",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "lightweight react modal",
   "main": "index.js",
   "module": "index.js",
@@ -35,7 +35,7 @@
   "files": [
     "index.*"
   ],
-  "homepage": "https://github.com/ladderok34/react-select#readme",
+  "homepage": "https://github.com/ladderok34/lightweight-react-modal#readme",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/parser": "^7.9.2",
