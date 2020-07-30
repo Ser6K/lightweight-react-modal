@@ -4,6 +4,7 @@ import React, {
     useRef,
 } from 'react';
 import { createPortal } from 'react-dom';
+import document from 'global/document';
 import {
     getHeader,
     getFooter,
