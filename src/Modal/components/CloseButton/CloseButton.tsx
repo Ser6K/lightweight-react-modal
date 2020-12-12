@@ -1,26 +1,17 @@
-import React from 'react';
-import { classNames } from 'utils';
-import styles from './CloseButton.css';
+import React from 'react'
+import { classNames } from 'src/utils'
+import styles from './CloseButton.css'
 
 interface CloseButtonProps {
-    className?: string;
-    onClick: () => void;
-    icon: React.ReactNode;
-};
+  className?: string
+  onClick: () => void
+  icon: React.ReactNode
+}
 
-const CloseButton = React.memo(({
-    onClick = () => {},
-    icon = null,
-    className = null,
-}: CloseButtonProps) => (
-    <button
-        role="button"
-        className={classNames(styles.closeButton, className)}
-        onClick={onClick}
-    >
-        {icon ? icon : 'x'}
-    </button>
-));
+const CloseButton: React.FC<CloseButtonProps> = ({ onClick, icon = null, className }) => (
+  <button role="button" className={classNames(styles.closeButton, className)} onClick={onClick}>
+    {icon ?? 'x'}
+  </button>
+)
 
-CloseButton.displayName = 'CloseButton';
-export default CloseButton;
+export default CloseButton

@@ -1,18 +1,18 @@
 .closeButton {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background: none;
-    border: none;
-    color: grey;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    &:hover {
-        color: black;
-    }
-    &:focus {
-        color: black;
-        outline: 0;
-    }
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  color: grey;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.closeButton:hover {
+  color: black;
+}
+.closeButton:focus {
+  color: black;
+  outline: 0;
 }

@@ -1,25 +1,17 @@
-import React from 'react';
-import { FooterDisplayName, classNames } from 'utils';
-import styles from './ModalFooter.css';
+import React from 'react'
+import { classNames } from 'src/utils'
+import styles from './ModalFooter.css'
 
 interface ModalFooterProps {
-    children: React.ReactNode,
-    className?: string,
-    [propName: string]: any,
-};
+  children: React.ReactNode
+  className?: string | null
+  [propName: string]: any
+}
 
-const ModalFooter = React.memo(({
-    children,
-    className,
-    ...props
-}: ModalFooterProps) => (
-    <div
-        {...props}
-        className={classNames(styles.footer, className)}
-    >
-        {children}
-    </div>
-));
+const ModalFooter: React.FC<ModalFooterProps> = ({ children, className, ...props }) => (
+  <div {...props} className={classNames(styles.footer, className)}>
+    {children}
+  </div>
+)
 
-ModalFooter.displayName = FooterDisplayName;
-export default ModalFooter;
+export default ModalFooter

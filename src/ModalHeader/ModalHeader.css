@@ -1,6 +1,6 @@
 .header {
-    flex-shrink: 0;
-    border-bottom: 1px solid grey;
-    padding: 15px 20px;
-    box-sizing: border-box;
+  flex-shrink: 0;
+  border-bottom: 1px solid grey;
+  padding: 15px 20px;
+  box-sizing: border-box;
 }

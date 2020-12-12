@@ -1,20 +1,22 @@
 {
-    "compilerOptions": {
-        "outDir": "./src",
-        "baseUrl": ".",
-        "noImplicitAny": true,
-        "target": "es6",
-        "jsx": "react",
-        "allowJs": true,
-        "types": ["jest", "node"],
-        "moduleResolution": "node",
-        "paths": {
-            "utils": ["src/utils/utils"],
-            "register": ["src/utils/register"]
-        },
-        "allowSyntheticDefaultImports": true
-    },
-    "include": [
-        "src", "./declarations.d.ts"
-    ]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react"
+  },
+  "include": ["src", "declarations.d.ts"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"],
+  "paths": {
+    "src/*": ["src/*"]
+  }
 }
