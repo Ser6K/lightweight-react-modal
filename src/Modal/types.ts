@@ -1,7 +1,9 @@
 import { ClassNameType, ReactNodeType } from 'src/types'
+import { onCloseType } from 'src/types'
 
 export interface ModalTypes {
-  onClose?: () => void
+  onClose?: onCloseType
+  onOpen?: (ref: HTMLDivElement) => void
   fluid?: boolean
   closable?: boolean
   maxHeight?: number

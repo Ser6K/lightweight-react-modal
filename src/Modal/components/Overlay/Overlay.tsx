@@ -1,12 +1,12 @@
 import React from 'react'
-import { classNames } from 'src/utils'
+import { classnames } from 'src/utils'
+
+import { OverlayTypes } from './types'
+
 import styles from './Overlay.css'
 
-interface OverlayProps {
-  onClick?: () => void
-  className?: string | null
-}
-
-const Overlay: React.FC<OverlayProps> = ({ onClick, className }) => <div onClick={onClick} className={classNames(styles.overlay, className)} />
+const Overlay: React.FC<OverlayTypes> = ({ onClick, className }) => (
+  <div data-testid="modal-overlay" onClick={onClick} className={classnames(styles.overlay, className)} />
+)
 
 export default Overlay

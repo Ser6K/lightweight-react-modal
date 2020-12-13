@@ -1,15 +1,16 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { memo, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { getHeader, getFooter, getContent, handleEscPress, classNames, addModal, removeModal } from 'src/utils'
+import { classnames } from 'src/utils'
+import { useEscOnPress } from 'src/hooks'
 import CloseButton from './components/CloseButton/CloseButton'
 import Overlay from './components/Overlay/Overlay'
-
 import { ModalTypes } from './types'
 
 import styles from './Modal.css'
 
 const Modal: React.FC<ModalTypes> = ({
-  onClose,
+  onClose = null,
+  onOpen = null,
   fluid = false,
   closable = true,
   maxHeight = 500,
@@ -26,54 +27,50 @@ const Modal: React.FC<ModalTypes> = ({
   closeButtonIcon = null,
   ...props
 }) => {
-  const header = useCallback(getHeader(children), [children])
-  const footer = useCallback(getFooter(children), [children])
-  const content = useCallback(getContent(children), [children])
-  const modalRef = useRef(null)
+  const modalRef = useRef<HTMLDivElement>(null)
+  const isReady = useRef(false)
+
+  useEscOnPress(modalRef.current, onClose, closable)
 
   useEffect(() => {
-    addModal(modalRef)
-  }, [modalRef])
-
-  const escPressed = handleEscPress(closable, modalRef)
-
-  const closeModal = useCallback(() => {
-    if (!closable || !onClose) {
+    if (modalRef.current == null || isReady.current || onOpen == null) {
       return
     }
-    removeModal(modalRef)
-    onClose()
-  }, [closable, onClose, modalRef])
+    onOpen(modalRef.current)
+    isReady.current = true
+  }, [modalRef, onOpen])
 
-  useEffect(() => {
-    if (escPressed) {
-      closeModal()
+  let inlineStyles = {}
+
+  if (!fluid) {
+    inlineStyles = {
+      maxWidth: `${maxWidth}px`,
+      minWidth: `${minWidth}px`,
+      maxHeight: `${maxHeight}px`,
+      minHeight: `${minHeight}px`,
     }
-  }, [escPressed])
+  }
 
   return createPortal(
-    <div {...props} className={classNames(styles.wrapper, customClassNames.wrapper)}>
-      <div
-        ref={modalRef}
-        className={classNames(styles.modal, customClassNames.modal)}
-        style={{
-          maxWidth: `${!fluid ? `${maxWidth}px` : ''}`,
-          minWidth: `${!fluid ? `${minWidth}px` : ''}`,
-          maxHeight: `${!fluid ? `${maxHeight}px` : ''}`,
-          minHeight: `${!fluid ? `${minHeight}px` : ''}`,
-        }}
-      >
-        {closable && (
+    <div {...props} className={classnames(styles.wrapper, customClassNames.wrapper)}>
+      <div ref={modalRef} className={classnames(styles.modal, customClassNames.modal)} style={inlineStyles}>
+        {closable ? (
           <CloseButton onClick={closeModal} icon={closeButtonIcon} {...(customClassNames.closeBtn != null ? { className: customClassNames.closeBtn } : {})} />
-        )}
-        {header && header}
-        {content && content}
-        {footer && footer}
+        ) : null}
+        {children}
       </div>
       <Overlay onClick={closeModal} className={customClassNames.overlay} />
     </div>,
     document.body
   )
+
+  function closeModal() {
+    if (!closable || onClose == null || modalRef.current == null) {
+      return
+    }
+
+    onClose(modalRef.current)
+  }
 }
 
-export default React.memo(Modal)
+export default memo(Modal)

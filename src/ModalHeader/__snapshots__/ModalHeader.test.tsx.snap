@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Modal footer it matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="header className"
+    style="display: inline;"
+  >
+    Header
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Modal header it matches snapshot with no props 1`] = `
 <ModalHeader>
   <div

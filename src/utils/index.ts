@@ -1,2 +1,1 @@
-export * from './register'
-export * from './utils'
+export { classnames } from './classnames'

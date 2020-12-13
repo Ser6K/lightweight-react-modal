@@ -1,7 +1,7 @@
 import React from 'react'
 import { renderHook, act } from '@testing-library/react-hooks'
 import ModalProvider from './ModalProvider'
-import useModalContextHook from './useModalContextHook'
+import useModalContext from '../hooks/useModalContext'
 
 describe('ModalProvider', () => {
   let modalContext = null
@@ -11,7 +11,7 @@ describe('ModalProvider', () => {
 
   beforeEach(() => {
     const modal = ({ children }) => <ModalProvider>{children}</ModalProvider>
-    modalContext = renderHook(() => useModalContextHook(), { wrapper: modal }).result
+    modalContext = renderHook(() => useModalContext(), { wrapper: modal }).result
   })
 
   test('modal list return correct array of modal names', () => {

@@ -1,15 +1,12 @@
 import React from 'react'
-import { classNames } from 'src/utils'
+import { classnames } from 'src/utils'
+
+import { CloseButtonTypes } from './types'
+
 import styles from './CloseButton.css'
 
-interface CloseButtonProps {
-  className?: string
-  onClick: () => void
-  icon: React.ReactNode
-}
-
-const CloseButton: React.FC<CloseButtonProps> = ({ onClick, icon = null, className }) => (
-  <button role="button" className={classNames(styles.closeButton, className)} onClick={onClick}>
+const CloseButton: React.FC<CloseButtonTypes> = ({ onClick, icon, className }) => (
+  <button role="button" className={classnames(styles.closeButton, className)} onClick={onClick}>
     {icon ?? 'x'}
   </button>
 )
