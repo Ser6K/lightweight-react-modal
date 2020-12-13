@@ -15,7 +15,7 @@ npm i lightweight-react-modal
 import React from 'react'
 import { Modal, ModalHeader, ModalContent, ModalFooter } from 'lightweight-react-modal'
 
-;<Modal>
+<Modal>
   <ModalHeader>Modal Header.</ModalHeader>
   <ModalContent>Modal Content.</ModalContent>
   <ModalFooter>Modal Footer.</ModalFooter>
