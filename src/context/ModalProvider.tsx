@@ -1,12 +1,10 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useMemo } from 'react'
 import ModalContext from './ModalContext'
 import ModalConsumer from './ModalConsumer'
 
-type ModalProviderProps = {
-  children: React.ReactNode
-}
+import { ModalProviderTypes } from './types'
 
-const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
+const ModalProvider: React.FC<ModalProviderTypes> = ({ children }) => {
   const [modalList, setModalList] = useState<string[]>([])
 
   const isOpen = (name: string) => modalList.includes(name)
@@ -45,15 +43,18 @@ const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
     openModal(name)
   }
 
-  const modal = {
-    open: (name: string) => openModal(name),
-    close: (name: string) => closeModal(name),
-    toggle: (name: string) => toggleModal(name),
-    closeAll: () => closeAll(),
-    isOpen: (name: string) => isOpen(name),
-    isClose: (name: string) => isClosed(name),
-    list: modalList,
-  }
+  const modal = useMemo(
+    () => ({
+      open: (name: string) => openModal(name),
+      close: (name: string) => closeModal(name),
+      toggle: (name: string) => toggleModal(name),
+      closeAll: () => closeAll(),
+      isOpen: (name: string) => isOpen(name),
+      isClose: (name: string) => isClosed(name),
+      list: modalList,
+    }),
+    [modalList]
+  )
 
   return (
     <ModalContext.Provider value={modal}>

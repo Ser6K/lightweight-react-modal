@@ -1,14 +1,11 @@
 import React from 'react'
 import { classNames } from 'src/utils'
+
+import { ModalFooterTypes } from './types'
+
 import styles from './ModalFooter.css'
 
-interface ModalFooterProps {
-  children: React.ReactNode
-  className?: string | null
-  [propName: string]: any
-}
-
-const ModalFooter: React.FC<ModalFooterProps> = ({ children, className, ...props }) => (
+const ModalFooter: React.FC<ModalFooterTypes> = ({ children, className, ...props }) => (
   <div {...props} className={classNames(styles.footer, className)}>
     {children}
   </div>

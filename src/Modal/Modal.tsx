@@ -3,28 +3,12 @@ import { createPortal } from 'react-dom'
 import { getHeader, getFooter, getContent, handleEscPress, classNames, addModal, removeModal } from 'src/utils'
 import CloseButton from './components/CloseButton/CloseButton'
 import Overlay from './components/Overlay/Overlay'
+
+import { ModalTypes } from './types'
+
 import styles from './Modal.css'
 
-interface ModalProps {
-  onClose?: () => void
-  fluid?: boolean
-  closable?: boolean
-  maxHeight?: number
-  minHeight?: number
-  maxWidth?: number
-  minWidth?: number
-  children: React.ReactNode
-  customClassNames?: {
-    wrapper: string | null
-    modal: string | null
-    closeBtn: string | null
-    overlay: string | null
-  }
-  closeButtonIcon?: React.ReactNode
-  [propName: string]: any
-}
-
-const Modal: React.FC<ModalProps> = ({
+const Modal: React.FC<ModalTypes> = ({
   onClose,
   fluid = false,
   closable = true,

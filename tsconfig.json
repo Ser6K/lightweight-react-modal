@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "rootDir": "src",
+    "outDir": "dist",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
@@ -9,12 +11,11 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
+    "declaration": true,
     "jsx": "react"
   },
-  "include": ["src", "declarations.d.ts"],
+  "include": ["src", "src/types/declarations.d.ts"],
   "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"],
   "paths": {
     "src/*": ["src/*"]

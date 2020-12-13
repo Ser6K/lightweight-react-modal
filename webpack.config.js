@@ -1,12 +1,13 @@
 const path = require('path')
+const { CheckerPlugin } = require('awesome-typescript-loader')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   devtool: false,
   entry: path.resolve(__dirname, './src/index.ts'),
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
-    library: 'ReactModal',
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
@@ -15,7 +16,7 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: { loader: 'babel-loader' },
+        use: { loader: 'awesome-typescript-loader' },
       },
       {
         test: /\.css$/i,
@@ -40,6 +41,7 @@ module.exports = {
       src: path.resolve(__dirname, 'src'),
     },
   },
+  plugins: [new CheckerPlugin(), new CleanWebpackPlugin()],
   externals: {
     react: {
       root: 'React',
